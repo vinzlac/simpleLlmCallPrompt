@@ -8,16 +8,16 @@ import argparse
 def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="LLM Interactive Client")
-    parser.add_argument("--model", choices=["mistral", "gemini"], default="mistral",
-                       help="Choose the LLM model to use (default: mistral)")
+    parser.add_argument("--provider", choices=["mistral", "gemini"], default="mistral",
+                       help="Choose the LLM provider to use (default: mistral)")
     args = parser.parse_args()
 
     # Load environment variables from .env file
     dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
     load_dotenv(dotenv_path=dotenv_path, override=True)
 
-    # Get the appropriate API key based on the selected model
-    if args.model == "mistral":
+    # Get the appropriate API key based on the selected provider
+    if args.provider == "mistral":
         api_key = os.getenv("MISTRAL_API_KEY")
         if not api_key or api_key.strip() == "":
             print("Error: MISTRAL_API_KEY not found in .env file")
@@ -48,8 +48,8 @@ def main():
                 print("Please enter a valid prompt.")
                 continue
 
-            # Call the appropriate API based on the selected model
-            if args.model == "mistral":
+            # Call the appropriate API based on the selected provider
+            if args.provider == "mistral":
                 response = call_mistral_api(api_key, user_prompt)
                 response_label = "Mistral Response"
             else:  # gemini
