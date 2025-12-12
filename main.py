@@ -13,7 +13,8 @@ def main():
     args = parser.parse_args()
 
     # Load environment variables from .env file
-    load_dotenv()
+    dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+    load_dotenv(dotenv_path=dotenv_path, override=True)
 
     # Get the appropriate API key based on the selected model
     if args.model == "mistral":
@@ -121,7 +122,7 @@ def call_gemini_api(api_key, prompt):
     """
     try:
         headers = {
-            "Authorization": f"Bearer {api_key}",
+            "X-goog-api-key": api_key,
             "Content-Type": "application/json"
         }
 
@@ -139,7 +140,7 @@ def call_gemini_api(api_key, prompt):
 
         # Make the API request
         response = requests.post(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
             headers=headers,
             json=data,
             timeout=30
