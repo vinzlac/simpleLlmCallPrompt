@@ -1,0 +1,14 @@
+{
+  "1": [
+    "gemini-2.5-flash",
+    "Version flash optimisée et performante"
+  ],
+  "2": [
+    "gemini-2.5-pro",
+    "Modèle pro pour raisonnement avancé"
+  ],
+  "3": [
+    "gemini-2.0-flash-exp",
+    "Version expérimentale de Gemini 2.0 Flash"
+  ]
+}

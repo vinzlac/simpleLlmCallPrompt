@@ -1,0 +1,246 @@
+{
+  "1": [
+    "pixtral-large-2411",
+    "Official pixtral-large-2411 Mistral AI model"
+  ],
+  "2": [
+    "pixtral-12b-2409",
+    "A 12B model with image understanding capabilities in addition to text."
+  ],
+  "3": [
+    "pixtral-12b",
+    "A 12B model with image understanding capabilities in addition to text."
+  ],
+  "4": [
+    "mistral-small-2506",
+    "Our latest enterprise-grade small model with the latest version released June..."
+  ],
+  "5": [
+    "mistral-small-2501",
+    "Our latest enterprise-grade small model with the latest version released Janu..."
+  ],
+  "6": [
+    "mistral-medium-2508",
+    "Update on Mistral Medium 3 with improved capabilities."
+  ],
+  "7": [
+    "mistral-medium-2505",
+    "Our frontier-class multimodal model released May 2025."
+  ],
+  "8": [
+    "mistral-medium",
+    "Update on Mistral Medium 3 with improved capabilities."
+  ],
+  "9": [
+    "mistral-large-pixtral-2411",
+    "Official pixtral-large-2411 Mistral AI model"
+  ],
+  "10": [
+    "mistral-large-2512",
+    "Official mistral-large-2512 Mistral AI model"
+  ],
+  "11": [
+    "mistral-large-2411",
+    "Our top-tier reasoning model for high-complexity tasks with the lastest versi..."
+  ],
+  "12": [
+    "labs-mistral-small-creative",
+    "Official labs-mistral-small-creative Mistral AI model"
+  ],
+  "13": [
+    "voxtral-small-latest",
+    "A small audio understanding model released in July 2025"
+  ],
+  "14": [
+    "voxtral-mini-latest",
+    "A mini audio understanding model released in July 2025"
+  ],
+  "15": [
+    "voxtral-mini-latest",
+    "A mini transcription model released in July 2025"
+  ],
+  "16": [
+    "pixtral-large-latest",
+    "Official pixtral-large-2411 Mistral AI model"
+  ],
+  "17": [
+    "pixtral-12b-latest",
+    "A 12B model with image understanding capabilities in addition to text."
+  ],
+  "18": [
+    "mistral-tiny-latest",
+    "Our best multilingual open source model released July 2024."
+  ],
+  "19": [
+    "mistral-small-latest",
+    "Our latest enterprise-grade small model with the latest version released June..."
+  ],
+  "20": [
+    "mistral-ocr-latest",
+    "Official mistral-ocr-2512 Mistral AI model"
+  ],
+  "21": [
+    "mistral-moderation-latest",
+    "Official mistral-moderation-2411 Mistral AI model"
+  ],
+  "22": [
+    "mistral-medium-latest",
+    "Update on Mistral Medium 3 with improved capabilities."
+  ],
+  "23": [
+    "mistral-large-latest",
+    "Official mistral-large-2512 Mistral AI model"
+  ],
+  "24": [
+    "ministral-8b-latest",
+    "Ministral 3 (a.k.a. Tinystral) 8B Instruct."
+  ],
+  "25": [
+    "ministral-3b-latest",
+    "Ministral 3 (a.k.a. Tinystral) 3B Instruct."
+  ],
+  "26": [
+    "ministral-14b-latest",
+    "Ministral 3 (a.k.a. Tinystral) 14B Instruct."
+  ],
+  "27": [
+    "magistral-small-latest",
+    "Our efficient reasoning model released September 2025."
+  ],
+  "28": [
+    "magistral-medium-latest",
+    "Our frontier-class reasoning model release candidate September 2025."
+  ],
+  "29": [
+    "devstral-small-latest",
+    "Official labs-devstral-small-2512 Mistral AI model"
+  ],
+  "30": [
+    "devstral-medium-latest",
+    "Official devstral-2512 Mistral AI model"
+  ],
+  "31": [
+    "devstral-latest",
+    "Official devstral-2512 Mistral AI model"
+  ],
+  "32": [
+    "codestral-latest",
+    "Our cutting-edge language model for coding released August 2025."
+  ],
+  "33": [
+    "voxtral-small-2507",
+    "A small audio understanding model released in July 2025"
+  ],
+  "34": [
+    "voxtral-mini-transcribe-2507",
+    "A mini transcription model released in July 2025"
+  ],
+  "35": [
+    "voxtral-mini-2507",
+    "A mini audio understanding model released in July 2025"
+  ],
+  "36": [
+    "voxtral-mini-2507",
+    "A mini transcription model released in July 2025"
+  ],
+  "37": [
+    "open-mistral-nemo-2407",
+    "Our best multilingual open source model released July 2024."
+  ],
+  "38": [
+    "open-mistral-nemo",
+    "Our best multilingual open source model released July 2024."
+  ],
+  "39": [
+    "open-mistral-7b",
+    "Our first dense model released September 2023."
+  ],
+  "40": [
+    "mistral-tiny-2407",
+    "Our best multilingual open source model released July 2024."
+  ],
+  "41": [
+    "mistral-tiny-2312",
+    "Our first dense model released September 2023."
+  ],
+  "42": [
+    "mistral-tiny",
+    "Our first dense model released September 2023."
+  ],
+  "43": [
+    "mistral-ocr-2512",
+    "Official mistral-ocr-2512 Mistral AI model"
+  ],
+  "44": [
+    "mistral-ocr-2505",
+    "Official mistral-ocr-2505 Mistral AI model"
+  ],
+  "45": [
+    "mistral-ocr-2503",
+    "Official mistral-ocr-2503 Mistral AI model"
+  ],
+  "46": [
+    "mistral-moderation-2411",
+    "Official mistral-moderation-2411 Mistral AI model"
+  ],
+  "47": [
+    "ministral-8b-2512",
+    "Ministral 3 (a.k.a. Tinystral) 8B Instruct."
+  ],
+  "48": [
+    "ministral-8b-2410",
+    "Powerful edge model with extremely high performance/price ratio."
+  ],
+  "49": [
+    "ministral-3b-2512",
+    "Ministral 3 (a.k.a. Tinystral) 3B Instruct."
+  ],
+  "50": [
+    "ministral-3b-2410",
+    "World's best edge model."
+  ],
+  "51": [
+    "ministral-14b-2512",
+    "Ministral 3 (a.k.a. Tinystral) 14B Instruct."
+  ],
+  "52": [
+    "magistral-small-2509",
+    "Our efficient reasoning model released September 2025."
+  ],
+  "53": [
+    "magistral-medium-2509",
+    "Our frontier-class reasoning model release candidate September 2025."
+  ],
+  "54": [
+    "labs-devstral-small-2512",
+    "Official labs-devstral-small-2512 Mistral AI model"
+  ],
+  "55": [
+    "devstral-small-2507",
+    "Our small open-source code-agentic model."
+  ],
+  "56": [
+    "devstral-medium-2507",
+    "Our medium code-agentic model."
+  ],
+  "57": [
+    "devstral-2512",
+    "Official devstral-2512 Mistral AI model"
+  ],
+  "58": [
+    "codestral-2508",
+    "Our cutting-edge language model for coding released August 2025."
+  ],
+  "59": [
+    "codestral-2501",
+    "Our cutting-edge language model for coding released December 2024."
+  ],
+  "60": [
+    "codestral-2412",
+    "Our cutting-edge language model for coding released December 2024."
+  ],
+  "61": [
+    "codestral-2411-rc5",
+    "Our cutting-edge language model for coding released December 2024."
+  ]
+}
