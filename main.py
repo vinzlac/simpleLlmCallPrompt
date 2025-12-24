@@ -182,7 +182,11 @@ class LLMInteractiveClient:
     def run_interactive_session(self):
         """Run an interactive session with the LLM"""
         provider_name = self.provider.capitalize()
+        model_name = self.config.mistral_model if self.provider == "mistral" else self.config.gemini_model
+        
         logger.info(f"{provider_name} LLM Interactive Client")
+        logger.info(f"Provider: {provider_name}")
+        logger.info(f"Modèle: {model_name}")
         logger.info("Type 'quit', 'exit', or 'q' to end the session")
         logger.info("----------------------------------------")
 
@@ -202,6 +206,7 @@ class LLMInteractiveClient:
                 if response:
                     logger.info(f"\n{provider_name} Response:")
                     logger.info(response)
+                    logger.info(f"\n[Provider: {provider_name} | Modèle: {model_name}]")
                 else:
                     logger.error(f"No response received from {provider_name} API.")
 

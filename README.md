@@ -14,7 +14,7 @@ A simple Python application that allows you to interact with multiple LLM APIs (
 
 ## Requirements
 
-- Python 3.14+
+- Python 3.11+
 - uv (for dependency management)
 - Mistral API key (for Mistral provider)
 - Gemini API key (for Gemini provider)
@@ -101,7 +101,11 @@ You can modify the following parameters in `main.py`:
 
 ## Testing
 
-The project includes a built-in testing script to verify your setup:
+The project includes multiple testing utilities:
+
+### Basic Setup Verification
+
+Run the setup verification script:
 
 ```bash
 python test_app.py
@@ -112,6 +116,22 @@ This will check:
 - API key configuration
 - Dependency availability
 - Application structure
+
+### Unit Tests
+
+Run the unit test suite:
+
+```bash
+python test_unit.py
+```
+
+This will run comprehensive unit tests for all classes:
+- APIConfig
+- LLMAPIClient (base class)
+- MistralAPIClient
+- GeminiAPIClient
+- LLMInteractiveClient
+- Utility functions
 
 ## Dependencies
 
