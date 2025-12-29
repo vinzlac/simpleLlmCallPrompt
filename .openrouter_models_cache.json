@@ -1,0 +1,1414 @@
+{
+  "1": [
+    "ai21/jamba-large-1.7",
+    "Jamba Large 1.7 is the latest model in the Jamba open family, offering improv..."
+  ],
+  "2": [
+    "ai21/jamba-mini-1.7",
+    "Jamba Mini 1.7 is a compact and efficient member of the Jamba open model fami..."
+  ],
+  "3": [
+    "aion-labs/aion-1.0",
+    "Aion-1.0 is a multi-model system designed for high performance across various..."
+  ],
+  "4": [
+    "aion-labs/aion-1.0-mini",
+    "Aion-1.0-Mini 32B parameter model is a distilled version of the DeepSeek-R1 m..."
+  ],
+  "5": [
+    "aion-labs/aion-rp-llama-3.1-8b",
+    "Aion-RP-Llama-3.1-8B ranks the highest in the character evaluation portion of..."
+  ],
+  "6": [
+    "alfredpros/codellama-7b-instruct-solidity",
+    "A finetuned 7 billion parameters Code LLaMA - Instruct model to generate Soli..."
+  ],
+  "7": [
+    "alibaba/tongyi-deepresearch-30b-a3b",
+    "Tongyi DeepResearch is an agentic large language model developed by Tongyi La..."
+  ],
+  "8": [
+    "alibaba/tongyi-deepresearch-30b-a3b:free",
+    "Tongyi DeepResearch is an agentic large language model developed by Tongyi La..."
+  ],
+  "9": [
+    "allenai/olmo-2-0325-32b-instruct",
+    "OLMo-2 32B Instruct is a supervised instruction-finetuned variant of the OLMo..."
+  ],
+  "10": [
+    "allenai/olmo-3-32b-think:free",
+    "Olmo 3 32B Think is a large-scale, 32-billion-parameter model purpose-built f..."
+  ],
+  "11": [
+    "allenai/olmo-3-7b-instruct",
+    "Olmo 3 7B Instruct is a supervised instruction-fine-tuned variant of the Olmo..."
+  ],
+  "12": [
+    "allenai/olmo-3-7b-think",
+    "Olmo 3 7B Think is a research-oriented language model in the Olmo family desi..."
+  ],
+  "13": [
+    "allenai/olmo-3.1-32b-think:free",
+    "Olmo 3.1 32B Think is a large-scale, 32-billion-parameter model designed for ..."
+  ],
+  "14": [
+    "alpindale/goliath-120b",
+    "A large LLM created by combining two fine-tuned Llama 70B models into one 120..."
+  ],
+  "15": [
+    "amazon/nova-2-lite-v1",
+    "Nova 2 Lite is a fast, cost-effective reasoning model for everyday workloads ..."
+  ],
+  "16": [
+    "amazon/nova-lite-v1",
+    "Amazon Nova Lite 1.0 is a very low-cost multimodal model from Amazon that foc..."
+  ],
+  "17": [
+    "amazon/nova-micro-v1",
+    "Amazon Nova Micro 1.0 is a text-only model that delivers the lowest latency r..."
+  ],
+  "18": [
+    "amazon/nova-premier-v1",
+    "Amazon Nova Premier is the most capable of Amazon’s multimodal models for com..."
+  ],
+  "19": [
+    "amazon/nova-pro-v1",
+    "Amazon Nova Pro 1.0 is a capable multimodal model from Amazon focused on prov..."
+  ],
+  "20": [
+    "anthracite-org/magnum-v4-72b",
+    "This is a series of models designed to replicate the prose quality of the Cla..."
+  ],
+  "21": [
+    "anthropic/claude-3-haiku",
+    "Claude 3 Haiku is Anthropic's fastest and most compact model for\nnear-instant..."
+  ],
+  "22": [
+    "anthropic/claude-3-opus",
+    "Claude 3 Opus is Anthropic's most powerful model for highly complex tasks. It..."
+  ],
+  "23": [
+    "anthropic/claude-3.5-haiku",
+    "Claude 3.5 Haiku features offers enhanced capabilities in speed, coding accur..."
+  ],
+  "24": [
+    "anthropic/claude-3.5-haiku-20241022",
+    "Claude 3.5 Haiku features enhancements across all skill sets including coding..."
+  ],
+  "25": [
+    "anthropic/claude-3.5-sonnet",
+    "New Claude 3.5 Sonnet delivers better-than-Opus capabilities, faster-than-Son..."
+  ],
+  "26": [
+    "anthropic/claude-3.7-sonnet",
+    "Claude 3.7 Sonnet is an advanced large language model with improved reasoning..."
+  ],
+  "27": [
+    "anthropic/claude-3.7-sonnet:thinking",
+    "Claude 3.7 Sonnet is an advanced large language model with improved reasoning..."
+  ],
+  "28": [
+    "anthropic/claude-haiku-4.5",
+    "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering ..."
+  ],
+  "29": [
+    "anthropic/claude-opus-4",
+    "Claude Opus 4 is benchmarked as the world’s best coding model, at time of rel..."
+  ],
+  "30": [
+    "anthropic/claude-opus-4.1",
+    "Claude Opus 4.1 is an updated version of Anthropic’s flagship model, offering..."
+  ],
+  "31": [
+    "anthropic/claude-opus-4.5",
+    "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex..."
+  ],
+  "32": [
+    "anthropic/claude-sonnet-4",
+    "Claude Sonnet 4 significantly enhances the capabilities of its predecessor, S..."
+  ],
+  "33": [
+    "anthropic/claude-sonnet-4.5",
+    "Claude Sonnet 4.5 is Anthropic’s most advanced Sonnet model to date, optimize..."
+  ],
+  "34": [
+    "arcee-ai/coder-large",
+    "Coder‑Large is a 32 B‑parameter offspring of Qwen 2.5‑Instruct that has been ..."
+  ],
+  "35": [
+    "arcee-ai/maestro-reasoning",
+    "Maestro Reasoning is Arcee's flagship analysis model: a 32 B‑parameter deriva..."
+  ],
+  "36": [
+    "arcee-ai/spotlight",
+    "Spotlight is a 7‑billion‑parameter vision‑language model derived from Qwen 2...."
+  ],
+  "37": [
+    "arcee-ai/trinity-mini",
+    "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts languag..."
+  ],
+  "38": [
+    "arcee-ai/trinity-mini:free",
+    "Trinity Mini is a 26B-parameter (3B active) sparse mixture-of-experts languag..."
+  ],
+  "39": [
+    "arcee-ai/virtuoso-large",
+    "Virtuoso‑Large is Arcee's top‑tier general‑purpose LLM at 72 B parameters, tu..."
+  ],
+  "40": [
+    "arliai/qwq-32b-arliai-rpr-v1",
+    "QwQ-32B-ArliAI-RpR-v1 is a 32B parameter model fine-tuned from Qwen/QwQ-32B u..."
+  ],
+  "41": [
+    "baidu/ernie-4.5-21b-a3b",
+    "A sophisticated text-based Mixture-of-Experts (MoE) model featuring 21B total..."
+  ],
+  "42": [
+    "baidu/ernie-4.5-21b-a3b-thinking",
+    "ERNIE-4.5-21B-A3B-Thinking is Baidu's upgraded lightweight MoE model, refined..."
+  ],
+  "43": [
+    "baidu/ernie-4.5-300b-a47b",
+    "ERNIE-4.5-300B-A47B is a 300B parameter Mixture-of-Experts (MoE) language mod..."
+  ],
+  "44": [
+    "baidu/ernie-4.5-vl-28b-a3b",
+    "A powerful multimodal Mixture-of-Experts chat model featuring 28B total param..."
+  ],
+  "45": [
+    "baidu/ernie-4.5-vl-424b-a47b",
+    "ERNIE-4.5-VL-424B-A47B is a multimodal Mixture-of-Experts (MoE) model from Ba..."
+  ],
+  "46": [
+    "bytedance-seed/seed-1.6",
+    "Seed 1.6 is a general-purpose model released by the ByteDance Seed team. It i..."
+  ],
+  "47": [
+    "bytedance-seed/seed-1.6-flash",
+    "Seed 1.6 Flash is an ultra-fast multimodal deep thinking model by ByteDance S..."
+  ],
+  "48": [
+    "bytedance/ui-tars-1.5-7b",
+    "UI-TARS-1.5 is a multimodal vision-language agent optimized for GUI-based env..."
+  ],
+  "49": [
+    "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+    "Venice Uncensored Dolphin Mistral 24B Venice Edition is a fine-tuned variant ..."
+  ],
+  "50": [
+    "cohere/command-a",
+    "Command A is an open-weights 111B parameter model with a 256k context window ..."
+  ],
+  "51": [
+    "cohere/command-r-08-2024",
+    "command-r-08-2024 is an update of the [Command R](/models/cohere/command-r) w..."
+  ],
+  "52": [
+    "cohere/command-r-plus-08-2024",
+    "command-r-plus-08-2024 is an update of the [Command R+](/models/cohere/comman..."
+  ],
+  "53": [
+    "cohere/command-r7b-12-2024",
+    "Command R7B (12-2024) is a small, fast update of the Command R+ model, delive..."
+  ],
+  "54": [
+    "deepcogito/cogito-v2-preview-llama-109b-moe",
+    "An instruction-tuned, hybrid-reasoning Mixture-of-Experts model built on Llam..."
+  ],
+  "55": [
+    "deepcogito/cogito-v2-preview-llama-405b",
+    "Cogito v2 405B is a dense hybrid reasoning model that combines direct answeri..."
+  ],
+  "56": [
+    "deepcogito/cogito-v2-preview-llama-70b",
+    "Cogito v2 70B is a dense hybrid reasoning model that combines direct answerin..."
+  ],
+  "57": [
+    "deepcogito/cogito-v2.1-671b",
+    "Cogito v2.1 671B MoE represents one of the strongest open models globally, ma..."
+  ],
+  "58": [
+    "deepseek/deepseek-chat",
+    "DeepSeek-V3 is the latest model from the DeepSeek team, building upon the ins..."
+  ],
+  "59": [
+    "deepseek/deepseek-chat-v3-0324",
+    "DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iterat..."
+  ],
+  "60": [
+    "deepseek/deepseek-chat-v3.1",
+    "DeepSeek-V3.1 is a large hybrid reasoning model (671B parameters, 37B active)..."
+  ],
+  "61": [
+    "deepseek/deepseek-prover-v2",
+    "DeepSeek Prover V2 is a 671B parameter model, speculated to be geared towards..."
+  ],
+  "62": [
+    "deepseek/deepseek-r1",
+    "DeepSeek R1 is here: Performance on par with [OpenAI o1](/openai/o1), but ope..."
+  ],
+  "63": [
+    "deepseek/deepseek-r1-0528",
+    "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performa..."
+  ],
+  "64": [
+    "deepseek/deepseek-r1-0528-qwen3-8b",
+    "DeepSeek-R1-0528 is a lightly upgraded release of DeepSeek R1 that taps more ..."
+  ],
+  "65": [
+    "deepseek/deepseek-r1-0528:free",
+    "May 28th update to the [original DeepSeek R1](/deepseek/deepseek-r1) Performa..."
+  ],
+  "66": [
+    "deepseek/deepseek-r1-distill-llama-70b",
+    "DeepSeek R1 Distill Llama 70B is a distilled large language model based on [L..."
+  ],
+  "67": [
+    "deepseek/deepseek-r1-distill-qwen-14b",
+    "DeepSeek R1 Distill Qwen 14B is a distilled large language model based on [Qw..."
+  ],
+  "68": [
+    "deepseek/deepseek-r1-distill-qwen-32b",
+    "DeepSeek R1 Distill Qwen 32B is a distilled large language model based on [Qw..."
+  ],
+  "69": [
+    "deepseek/deepseek-v3.1-terminus",
+    "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-cha..."
+  ],
+  "70": [
+    "deepseek/deepseek-v3.1-terminus:exacto",
+    "DeepSeek-V3.1 Terminus is an update to [DeepSeek V3.1](/deepseek/deepseek-cha..."
+  ],
+  "71": [
+    "deepseek/deepseek-v3.2",
+    "DeepSeek-V3.2 is a large language model designed to harmonize high computatio..."
+  ],
+  "72": [
+    "deepseek/deepseek-v3.2-exp",
+    "DeepSeek-V3.2-Exp is an experimental large language model released by DeepSee..."
+  ],
+  "73": [
+    "deepseek/deepseek-v3.2-speciale",
+    "DeepSeek-V3.2-Speciale is a high-compute variant of DeepSeek-V3.2 optimized f..."
+  ],
+  "74": [
+    "eleutherai/llemma_7b",
+    "Llemma 7B is a language model for mathematics. It was initialized with Code L..."
+  ],
+  "75": [
+    "essentialai/rnj-1-instruct",
+    "Rnj-1 is an 8B-parameter, dense, open-weight model family developed by Essent..."
+  ],
+  "76": [
+    "google/gemini-2.0-flash-001",
+    "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) com..."
+  ],
+  "77": [
+    "google/gemini-2.0-flash-exp:free",
+    "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) com..."
+  ],
+  "78": [
+    "google/gemini-2.0-flash-lite-001",
+    "Gemini 2.0 Flash Lite offers a significantly faster time to first token (TTFT..."
+  ],
+  "79": [
+    "google/gemini-2.5-flash",
+    "Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically d..."
+  ],
+  "80": [
+    "google/gemini-2.5-flash-image",
+    "Gemini 2.5 Flash Image, a.k.a. \"Nano Banana,\" is now generally available. It ..."
+  ],
+  "81": [
+    "google/gemini-2.5-flash-image-preview",
+    "Gemini 2.5 Flash Image Preview, a.k.a. \"Nano Banana,\" is a state of the art i..."
+  ],
+  "82": [
+    "google/gemini-2.5-flash-lite",
+    "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 fami..."
+  ],
+  "83": [
+    "google/gemini-2.5-flash-lite-preview-09-2025",
+    "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 fami..."
+  ],
+  "84": [
+    "google/gemini-2.5-flash-preview-09-2025",
+    "Gemini 2.5 Flash Preview September 2025 Checkpoint is Google's state-of-the-a..."
+  ],
+  "85": [
+    "google/gemini-2.5-pro",
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced re..."
+  ],
+  "86": [
+    "google/gemini-2.5-pro-preview",
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced re..."
+  ],
+  "87": [
+    "google/gemini-2.5-pro-preview-05-06",
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced re..."
+  ],
+  "88": [
+    "google/gemini-3-flash-preview",
+    "Gemini 3 Flash Preview is a high speed, high value thinking model designed fo..."
+  ],
+  "89": [
+    "google/gemini-3-pro-image-preview",
+    "Nano Banana Pro is Google’s most advanced image-generation and editing model,..."
+  ],
+  "90": [
+    "google/gemini-3-pro-preview",
+    "Gemini 3 Pro is Google’s flagship frontier model for high-precision multimoda..."
+  ],
+  "91": [
+    "google/gemma-2-27b-it",
+    "Gemma 2 27B by Google is an open model built from the same research and techn..."
+  ],
+  "92": [
+    "google/gemma-2-9b-it",
+    "Gemma 2 9B by Google is an advanced, open-source language model that sets a n..."
+  ],
+  "93": [
+    "google/gemma-3-12b-it",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "94": [
+    "google/gemma-3-12b-it:free",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "95": [
+    "google/gemma-3-27b-it",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "96": [
+    "google/gemma-3-27b-it:free",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "97": [
+    "google/gemma-3-4b-it",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "98": [
+    "google/gemma-3-4b-it:free",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "99": [
+    "google/gemma-3n-e2b-it:free",
+    "Gemma 3n E2B IT is a multimodal, instruction-tuned model developed by Google ..."
+  ],
+  "100": [
+    "google/gemma-3n-e4b-it",
+    "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resour..."
+  ],
+  "101": [
+    "google/gemma-3n-e4b-it:free",
+    "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resour..."
+  ],
+  "102": [
+    "gryphe/mythomax-l2-13b",
+    "One of the highest performing and most popular fine-tunes of Llama 2 13B, wit..."
+  ],
+  "103": [
+    "ibm-granite/granite-4.0-h-micro",
+    "Granite-4.0-H-Micro is a 3B parameter from the Granite 4 family of models. Th..."
+  ],
+  "104": [
+    "inception/mercury",
+    "Mercury is the first diffusion large language model (dLLM). Applying a breakt..."
+  ],
+  "105": [
+    "inception/mercury-coder",
+    "Mercury Coder is the first diffusion large language model (dLLM). Applying a ..."
+  ],
+  "106": [
+    "inflection/inflection-3-pi",
+    "Inflection 3 Pi powers Inflection's [Pi](https://pi.ai) chatbot, including ba..."
+  ],
+  "107": [
+    "inflection/inflection-3-productivity",
+    "Inflection 3 Productivity is optimized for following instructions. It is bett..."
+  ],
+  "108": [
+    "kwaipilot/kat-coder-pro:free",
+    "KAT-Coder-Pro V1 is KwaiKAT's most advanced agentic coding model in the KAT-C..."
+  ],
+  "109": [
+    "liquid/lfm-2.2-6b",
+    "LFM2 is a new generation of hybrid models developed by Liquid AI, specificall..."
+  ],
+  "110": [
+    "liquid/lfm2-8b-a1b",
+    "Model created via inbox interface"
+  ],
+  "111": [
+    "mancer/weaver",
+    "An attempt to recreate Claude-style verbosity, but don't expect the same leve..."
+  ],
+  "112": [
+    "meituan/longcat-flash-chat",
+    "LongCat-Flash-Chat is a large-scale Mixture-of-Experts (MoE) model with 560B ..."
+  ],
+  "113": [
+    "meta-llama/llama-3-70b-instruct",
+    "Meta's latest class of model (Llama 3) launched with a variety of sizes & fla..."
+  ],
+  "114": [
+    "meta-llama/llama-3-8b-instruct",
+    "Meta's latest class of model (Llama 3) launched with a variety of sizes & fla..."
+  ],
+  "115": [
+    "meta-llama/llama-3.1-405b",
+    "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & f..."
+  ],
+  "116": [
+    "meta-llama/llama-3.1-405b-instruct",
+    "The highly anticipated 400B class of Llama3 is here! Clocking in at 128k cont..."
+  ],
+  "117": [
+    "meta-llama/llama-3.1-405b-instruct:free",
+    "The highly anticipated 400B class of Llama3 is here! Clocking in at 128k cont..."
+  ],
+  "118": [
+    "meta-llama/llama-3.1-70b-instruct",
+    "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & f..."
+  ],
+  "119": [
+    "meta-llama/llama-3.1-8b-instruct",
+    "Meta's latest class of model (Llama 3.1) launched with a variety of sizes & f..."
+  ],
+  "120": [
+    "meta-llama/llama-3.2-11b-vision-instruct",
+    "Llama 3.2 11B Vision is a multimodal model with 11 billion parameters, design..."
+  ],
+  "121": [
+    "meta-llama/llama-3.2-1b-instruct",
+    "Llama 3.2 1B is a 1-billion-parameter language model focused on efficiently p..."
+  ],
+  "122": [
+    "meta-llama/llama-3.2-3b-instruct",
+    "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, opti..."
+  ],
+  "123": [
+    "meta-llama/llama-3.2-3b-instruct:free",
+    "Llama 3.2 3B is a 3-billion-parameter multilingual large language model, opti..."
+  ],
+  "124": [
+    "meta-llama/llama-3.2-90b-vision-instruct",
+    "The Llama 90B Vision model is a top-tier, 90-billion-parameter multimodal mod..."
+  ],
+  "125": [
+    "meta-llama/llama-3.3-70b-instruct",
+    "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained an..."
+  ],
+  "126": [
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "The Meta Llama 3.3 multilingual large language model (LLM) is a pretrained an..."
+  ],
+  "127": [
+    "meta-llama/llama-4-maverick",
+    "Llama 4 Maverick 17B Instruct (128E) is a high-capacity multimodal language m..."
+  ],
+  "128": [
+    "meta-llama/llama-4-scout",
+    "Llama 4 Scout 17B Instruct (16E) is a mixture-of-experts (MoE) language model..."
+  ],
+  "129": [
+    "meta-llama/llama-guard-2-8b",
+    "This safeguard model has 8B parameters and is based on the Llama 3 family. Ju..."
+  ],
+  "130": [
+    "meta-llama/llama-guard-3-8b",
+    "Llama Guard 3 is a Llama-3.1-8B pretrained model, fine-tuned for content safe..."
+  ],
+  "131": [
+    "meta-llama/llama-guard-4-12b",
+    "Llama Guard 4 is a Llama 4 Scout-derived multimodal pretrained model, fine-tu..."
+  ],
+  "132": [
+    "microsoft/phi-3-medium-128k-instruct",
+    "Phi-3 128K Medium is a powerful 14-billion parameter model designed for advan..."
+  ],
+  "133": [
+    "microsoft/phi-3-mini-128k-instruct",
+    "Phi-3 Mini is a powerful 3.8B parameter model designed for advanced language ..."
+  ],
+  "134": [
+    "microsoft/phi-3.5-mini-128k-instruct",
+    "Phi-3.5 models are lightweight, state-of-the-art open models. These models we..."
+  ],
+  "135": [
+    "microsoft/phi-4",
+    "[Microsoft Research](/microsoft) Phi-4 is designed to perform well in complex..."
+  ],
+  "136": [
+    "microsoft/phi-4-multimodal-instruct",
+    "Phi-4 Multimodal Instruct is a versatile 5.6B parameter foundation model that..."
+  ],
+  "137": [
+    "microsoft/phi-4-reasoning-plus",
+    "Phi-4-reasoning-plus is an enhanced 14B parameter model from Microsoft, fine-..."
+  ],
+  "138": [
+    "microsoft/wizardlm-2-8x22b",
+    "WizardLM-2 8x22B is Microsoft AI's most advanced Wizard model. It demonstrate..."
+  ],
+  "139": [
+    "minimax/minimax-01",
+    "MiniMax-01 is a combines MiniMax-Text-01 for text generation and MiniMax-VL-0..."
+  ],
+  "140": [
+    "minimax/minimax-m1",
+    "MiniMax-M1 is a large-scale, open-weight reasoning model designed for extende..."
+  ],
+  "141": [
+    "minimax/minimax-m2",
+    "MiniMax-M2 is a compact, high-efficiency large language model optimized for e..."
+  ],
+  "142": [
+    "minimax/minimax-m2.1",
+    "MiniMax-M2.1 is a lightweight, state-of-the-art large language model optimize..."
+  ],
+  "143": [
+    "mistralai/codestral-2508",
+    "Mistral's cutting-edge language model for coding released end of July 2025. C..."
+  ],
+  "144": [
+    "mistralai/devstral-2512",
+    "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing..."
+  ],
+  "145": [
+    "mistralai/devstral-2512:free",
+    "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing..."
+  ],
+  "146": [
+    "mistralai/devstral-medium",
+    "Devstral Medium is a high-performance code generation and agentic reasoning m..."
+  ],
+  "147": [
+    "mistralai/devstral-small",
+    "Devstral Small 1.1 is a 24B parameter open-weight language model for software..."
+  ],
+  "148": [
+    "mistralai/devstral-small-2505",
+    "Devstral-Small-2505 is a 24B parameter agentic LLM fine-tuned from Mistral-Sm..."
+  ],
+  "149": [
+    "mistralai/ministral-14b-2512",
+    "The largest model in the Ministral 3 family, Ministral 3 14B offers frontier ..."
+  ],
+  "150": [
+    "mistralai/ministral-3b",
+    "Ministral 3B is a 3B parameter model optimized for on-device and edge computi..."
+  ],
+  "151": [
+    "mistralai/ministral-3b-2512",
+    "The smallest model in the Ministral 3 family, Ministral 3 3B is a powerful, e..."
+  ],
+  "152": [
+    "mistralai/ministral-8b",
+    "Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-..."
+  ],
+  "153": [
+    "mistralai/ministral-8b-2512",
+    "A balanced model in the Ministral 3 family, Ministral 3 8B is a powerful, eff..."
+  ],
+  "154": [
+    "mistralai/mistral-7b-instruct",
+    "A high-performing, industry-standard 7.3B parameter model, with optimizations..."
+  ],
+  "155": [
+    "mistralai/mistral-7b-instruct-v0.1",
+    "A 7.3B parameter model that outperforms Llama 2 13B on all benchmarks, with o..."
+  ],
+  "156": [
+    "mistralai/mistral-7b-instruct-v0.2",
+    "A high-performing, industry-standard 7.3B parameter model, with optimizations..."
+  ],
+  "157": [
+    "mistralai/mistral-7b-instruct-v0.3",
+    "A high-performing, industry-standard 7.3B parameter model, with optimizations..."
+  ],
+  "158": [
+    "mistralai/mistral-7b-instruct:free",
+    "A high-performing, industry-standard 7.3B parameter model, with optimizations..."
+  ],
+  "159": [
+    "mistralai/mistral-large",
+    "This is Mistral AI's flagship model, Mistral Large 2 (version `mistral-large-..."
+  ],
+  "160": [
+    "mistralai/mistral-large-2407",
+    "This is Mistral AI's flagship model, Mistral Large 2 (version mistral-large-2..."
+  ],
+  "161": [
+    "mistralai/mistral-large-2411",
+    "Mistral Large 2 2411 is an update of [Mistral Large 2](/mistralai/mistral-lar..."
+  ],
+  "162": [
+    "mistralai/mistral-large-2512",
+    "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a spa..."
+  ],
+  "163": [
+    "mistralai/mistral-medium-3",
+    "Mistral Medium 3 is a high-performance enterprise-grade language model design..."
+  ],
+  "164": [
+    "mistralai/mistral-medium-3.1",
+    "Mistral Medium 3.1 is an updated version of Mistral Medium 3, which is a high..."
+  ],
+  "165": [
+    "mistralai/mistral-nemo",
+    "A 12B parameter model with a 128k token context length built by Mistral in co..."
+  ],
+  "166": [
+    "mistralai/mistral-saba",
+    "Mistral Saba is a 24B-parameter language model specifically designed for the ..."
+  ],
+  "167": [
+    "mistralai/mistral-small-24b-instruct-2501",
+    "Mistral Small 3 is a 24B-parameter language model optimized for low-latency p..."
+  ],
+  "168": [
+    "mistralai/mistral-small-3.1-24b-instruct",
+    "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (250..."
+  ],
+  "169": [
+    "mistralai/mistral-small-3.1-24b-instruct:free",
+    "Mistral Small 3.1 24B Instruct is an upgraded variant of Mistral Small 3 (250..."
+  ],
+  "170": [
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "Mistral-Small-3.2-24B-Instruct-2506 is an updated 24B parameter model from Mi..."
+  ],
+  "171": [
+    "mistralai/mistral-small-creative",
+    "Mistral Small Creative is an experimental small model designed for creative w..."
+  ],
+  "172": [
+    "mistralai/mistral-tiny",
+    "Note: This model is being deprecated. Recommended replacement is the newer [M..."
+  ],
+  "173": [
+    "mistralai/mixtral-8x22b-instruct",
+    "Mistral's official instruct fine-tuned version of [Mixtral 8x22B](/models/mis..."
+  ],
+  "174": [
+    "mistralai/mixtral-8x7b-instruct",
+    "Mixtral 8x7B Instruct is a pretrained generative Sparse Mixture of Experts, b..."
+  ],
+  "175": [
+    "mistralai/pixtral-12b",
+    "The first multi-modal, text+image-to-text model from Mistral AI. Its weights ..."
+  ],
+  "176": [
+    "mistralai/pixtral-large-2411",
+    "Pixtral Large is a 124B parameter, open-weight, multimodal model built on top..."
+  ],
+  "177": [
+    "mistralai/voxtral-small-24b-2507",
+    "Voxtral Small is an enhancement of Mistral Small 3, incorporating state-of-th..."
+  ],
+  "178": [
+    "moonshotai/kimi-dev-72b",
+    "Kimi-Dev-72B is an open-source large language model fine-tuned for software e..."
+  ],
+  "179": [
+    "moonshotai/kimi-k2",
+    "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model dev..."
+  ],
+  "180": [
+    "moonshotai/kimi-k2-0905",
+    "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). I..."
+  ],
+  "181": [
+    "moonshotai/kimi-k2-0905:exacto",
+    "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). I..."
+  ],
+  "182": [
+    "moonshotai/kimi-k2-thinking",
+    "Kimi K2 Thinking is Moonshot AI’s most advanced open reasoning model to date,..."
+  ],
+  "183": [
+    "moonshotai/kimi-k2:free",
+    "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model dev..."
+  ],
+  "184": [
+    "morph/morph-v3-fast",
+    "Morph's fastest apply model for code edits. ~10,500 tokens/sec with 96% accur..."
+  ],
+  "185": [
+    "morph/morph-v3-large",
+    "Morph's high-accuracy apply model for complex code edits. ~4,500 tokens/sec w..."
+  ],
+  "186": [
+    "neversleep/llama-3.1-lumimaid-8b",
+    "Lumimaid v0.2 8B is a finetune of [Llama 3.1 8B](/models/meta-llama/llama-3.1..."
+  ],
+  "187": [
+    "neversleep/noromaid-20b",
+    "A collab between IkariDev and Undi. This merge is suitable for RP, ERP, and g..."
+  ],
+  "188": [
+    "nex-agi/deepseek-v3.1-nex-n1:free",
+    "DeepSeek V3.1 Nex-N1 is the flagship release of the Nex-N1 series — a post-tr..."
+  ],
+  "189": [
+    "nousresearch/deephermes-3-mistral-24b-preview",
+    "DeepHermes 3 (Mistral 24B Preview) is an instruction-tuned language model by ..."
+  ],
+  "190": [
+    "nousresearch/hermes-2-pro-llama-3-8b",
+    "Hermes 2 Pro is an upgraded, retrained version of Nous Hermes 2, consisting o..."
+  ],
+  "191": [
+    "nousresearch/hermes-3-llama-3.1-405b",
+    "Hermes 3 is a generalist language model with many improvements over Hermes 2,..."
+  ],
+  "192": [
+    "nousresearch/hermes-3-llama-3.1-405b:free",
+    "Hermes 3 is a generalist language model with many improvements over Hermes 2,..."
+  ],
+  "193": [
+    "nousresearch/hermes-3-llama-3.1-70b",
+    "Hermes 3 is a generalist language model with many improvements over [Hermes 2..."
+  ],
+  "194": [
+    "nousresearch/hermes-4-405b",
+    "Hermes 4 is a large-scale reasoning model built on Meta-Llama-3.1-405B and re..."
+  ],
+  "195": [
+    "nousresearch/hermes-4-70b",
+    "Hermes 4 70B is a hybrid reasoning model from Nous Research, built on Meta-Ll..."
+  ],
+  "196": [
+    "nvidia/llama-3.1-nemotron-70b-instruct",
+    "NVIDIA's Llama 3.1 Nemotron 70B is a language model designed for generating p..."
+  ],
+  "197": [
+    "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+    "Llama-3.1-Nemotron-Ultra-253B-v1 is a large language model (LLM) optimized fo..."
+  ],
+  "198": [
+    "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+    "Llama-3.3-Nemotron-Super-49B-v1.5 is a 49B-parameter, English-centric reasoni..."
+  ],
+  "199": [
+    "nvidia/nemotron-3-nano-30b-a3b",
+    "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest com..."
+  ],
+  "200": [
+    "nvidia/nemotron-3-nano-30b-a3b:free",
+    "NVIDIA Nemotron 3 Nano 30B A3B is a small language MoE model with highest com..."
+  ],
+  "201": [
+    "nvidia/nemotron-nano-12b-v2-vl",
+    "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning..."
+  ],
+  "202": [
+    "nvidia/nemotron-nano-12b-v2-vl:free",
+    "NVIDIA Nemotron Nano 2 VL is a 12-billion-parameter open multimodal reasoning..."
+  ],
+  "203": [
+    "nvidia/nemotron-nano-9b-v2",
+    "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scrat..."
+  ],
+  "204": [
+    "nvidia/nemotron-nano-9b-v2:free",
+    "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scrat..."
+  ],
+  "205": [
+    "openai/chatgpt-4o-latest",
+    "OpenAI ChatGPT 4o is continually updated by OpenAI to point to the current ve..."
+  ],
+  "206": [
+    "openai/codex-mini",
+    "codex-mini-latest is a fine-tuned version of o4-mini specifically for use in ..."
+  ],
+  "207": [
+    "openai/gpt-3.5-turbo",
+    "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natur..."
+  ],
+  "208": [
+    "openai/gpt-3.5-turbo-0613",
+    "GPT-3.5 Turbo is OpenAI's fastest model. It can understand and generate natur..."
+  ],
+  "209": [
+    "openai/gpt-3.5-turbo-16k",
+    "This model offers four times the context length of gpt-3.5-turbo, allowing it..."
+  ],
+  "210": [
+    "openai/gpt-3.5-turbo-instruct",
+    "This model is a variant of GPT-3.5 Turbo tuned for instructional prompts and ..."
+  ],
+  "211": [
+    "openai/gpt-4",
+    "OpenAI's flagship model, GPT-4 is a large-scale multimodal language model cap..."
+  ],
+  "212": [
+    "openai/gpt-4-0314",
+    "GPT-4-0314 is the first version of GPT-4 released, with a context length of 8..."
+  ],
+  "213": [
+    "openai/gpt-4-1106-preview",
+    "The latest GPT-4 Turbo model with vision capabilities. Vision requests can no..."
+  ],
+  "214": [
+    "openai/gpt-4-turbo",
+    "The latest GPT-4 Turbo model with vision capabilities. Vision requests can no..."
+  ],
+  "215": [
+    "openai/gpt-4-turbo-preview",
+    "The preview GPT-4 model with improved instruction following, JSON mode, repro..."
+  ],
+  "216": [
+    "openai/gpt-4.1",
+    "GPT-4.1 is a flagship large language model optimized for advanced instruction..."
+  ],
+  "217": [
+    "openai/gpt-4.1-mini",
+    "GPT-4.1 Mini is a mid-sized model delivering performance competitive with GPT..."
+  ],
+  "218": [
+    "openai/gpt-4.1-nano",
+    "For tasks that demand low latency, GPT‑4.1 nano is the fastest and cheapest m..."
+  ],
+  "219": [
+    "openai/gpt-4o",
+    "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and..."
+  ],
+  "220": [
+    "openai/gpt-4o-2024-05-13",
+    "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and..."
+  ],
+  "221": [
+    "openai/gpt-4o-2024-08-06",
+    "The 2024-08-06 version of GPT-4o offers improved performance in structured ou..."
+  ],
+  "222": [
+    "openai/gpt-4o-2024-11-20",
+    "The 2024-11-20 version of GPT-4o offers a leveled-up creative writing ability..."
+  ],
+  "223": [
+    "openai/gpt-4o-audio-preview",
+    "The gpt-4o-audio-preview model adds support for audio inputs as prompts. This..."
+  ],
+  "224": [
+    "openai/gpt-4o-mini",
+    "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o..."
+  ],
+  "225": [
+    "openai/gpt-4o-mini-2024-07-18",
+    "GPT-4o mini is OpenAI's newest model after [GPT-4 Omni](/models/openai/gpt-4o..."
+  ],
+  "226": [
+    "openai/gpt-4o-mini-search-preview",
+    "GPT-4o mini Search Preview is a specialized model for web search in Chat Comp..."
+  ],
+  "227": [
+    "openai/gpt-4o-search-preview",
+    "GPT-4o Search Previewis a specialized model for web search in Chat Completion..."
+  ],
+  "228": [
+    "openai/gpt-4o:extended",
+    "GPT-4o (\"o\" for \"omni\") is OpenAI's latest AI model, supporting both text and..."
+  ],
+  "229": [
+    "openai/gpt-5",
+    "GPT-5 is OpenAI’s most advanced model, offering major improvements in reasoni..."
+  ],
+  "230": [
+    "openai/gpt-5-chat",
+    "GPT-5 Chat is designed for advanced, natural, multimodal, and context-aware c..."
+  ],
+  "231": [
+    "openai/gpt-5-codex",
+    "GPT-5-Codex is a specialized version of GPT-5 optimized for software engineer..."
+  ],
+  "232": [
+    "openai/gpt-5-image",
+    "[GPT-5](https://openrouter.ai/openai/gpt-5) Image combines OpenAI's GPT-5 mod..."
+  ],
+  "233": [
+    "openai/gpt-5-image-mini",
+    "GPT-5 Image Mini combines OpenAI's advanced language capabilities, powered by..."
+  ],
+  "234": [
+    "openai/gpt-5-mini",
+    "GPT-5 Mini is a compact version of GPT-5, designed to handle lighter-weight r..."
+  ],
+  "235": [
+    "openai/gpt-5-nano",
+    "GPT-5-Nano is the smallest and fastest variant in the GPT-5 system, optimized..."
+  ],
+  "236": [
+    "openai/gpt-5-pro",
+    "GPT-5 Pro is OpenAI’s most advanced model, offering major improvements in rea..."
+  ],
+  "237": [
+    "openai/gpt-5.1",
+    "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stro..."
+  ],
+  "238": [
+    "openai/gpt-5.1-chat",
+    "GPT-5.1 Chat (AKA Instant is the fast, lightweight member of the 5.1 family, ..."
+  ],
+  "239": [
+    "openai/gpt-5.1-codex",
+    "GPT-5.1-Codex is a specialized version of GPT-5.1 optimized for software engi..."
+  ],
+  "240": [
+    "openai/gpt-5.1-codex-max",
+    "GPT-5.1-Codex-Max is OpenAI’s latest agentic coding model, designed for long-..."
+  ],
+  "241": [
+    "openai/gpt-5.1-codex-mini",
+    "GPT-5.1-Codex-Mini is a smaller and faster version of GPT-5.1-Codex"
+  ],
+  "242": [
+    "openai/gpt-5.2",
+    "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stro..."
+  ],
+  "243": [
+    "openai/gpt-5.2-chat",
+    "GPT-5.2 Chat (AKA Instant) is the fast, lightweight member of the 5.2 family,..."
+  ],
+  "244": [
+    "openai/gpt-5.2-pro",
+    "GPT-5.2 Pro is OpenAI’s most advanced model, offering major improvements in a..."
+  ],
+  "245": [
+    "openai/gpt-oss-120b",
+    "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) langu..."
+  ],
+  "246": [
+    "openai/gpt-oss-120b:exacto",
+    "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) langu..."
+  ],
+  "247": [
+    "openai/gpt-oss-120b:free",
+    "gpt-oss-120b is an open-weight, 117B-parameter Mixture-of-Experts (MoE) langu..."
+  ],
+  "248": [
+    "openai/gpt-oss-20b",
+    "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under th..."
+  ],
+  "249": [
+    "openai/gpt-oss-20b:free",
+    "gpt-oss-20b is an open-weight 21B parameter model released by OpenAI under th..."
+  ],
+  "250": [
+    "openai/gpt-oss-safeguard-20b",
+    "gpt-oss-safeguard-20b is a safety reasoning model from OpenAI built upon gpt-..."
+  ],
+  "251": [
+    "openai/o1",
+    "The latest and strongest model family from OpenAI, o1 is designed to spend mo..."
+  ],
+  "252": [
+    "openai/o1-pro",
+    "The o1 series of models are trained with reinforcement learning to think befo..."
+  ],
+  "253": [
+    "openai/o3",
+    "o3 is a well-rounded and powerful model across domains. It sets a new standar..."
+  ],
+  "254": [
+    "openai/o3-deep-research",
+    "o3-deep-research is OpenAI's advanced model for deep research, designed to ta..."
+  ],
+  "255": [
+    "openai/o3-mini",
+    "OpenAI o3-mini is a cost-efficient language model optimized for STEM reasonin..."
+  ],
+  "256": [
+    "openai/o3-mini-high",
+    "OpenAI o3-mini-high is the same model as [o3-mini](/openai/o3-mini) with reas..."
+  ],
+  "257": [
+    "openai/o3-pro",
+    "The o-series of models are trained with reinforcement learning to think befor..."
+  ],
+  "258": [
+    "openai/o4-mini",
+    "OpenAI o4-mini is a compact reasoning model in the o-series, optimized for fa..."
+  ],
+  "259": [
+    "openai/o4-mini-deep-research",
+    "o4-mini-deep-research is OpenAI's faster, more affordable deep research model..."
+  ],
+  "260": [
+    "openai/o4-mini-high",
+    "OpenAI o4-mini-high is the same model as [o4-mini](/openai/o4-mini) with reas..."
+  ],
+  "261": [
+    "opengvlab/internvl3-78b",
+    "The InternVL3 series is an advanced multimodal large language model (MLLM). C..."
+  ],
+  "262": [
+    "openrouter/auto",
+    "Your prompt will be processed by a meta-model and routed to one of dozens of ..."
+  ],
+  "263": [
+    "openrouter/bodybuilder",
+    "Transform your natural language requests into structured OpenRouter API reque..."
+  ],
+  "264": [
+    "perplexity/sonar",
+    "Sonar is lightweight, affordable, fast, and simple to use — now featuring cit..."
+  ],
+  "265": [
+    "perplexity/sonar-deep-research",
+    "Sonar Deep Research is a research-focused model designed for multi-step retri..."
+  ],
+  "266": [
+    "perplexity/sonar-pro",
+    "Note: Sonar Pro pricing includes Perplexity search pricing. See [details here..."
+  ],
+  "267": [
+    "perplexity/sonar-pro-search",
+    "Exclusively available on the OpenRouter API, Sonar Pro's new Pro Search mode ..."
+  ],
+  "268": [
+    "perplexity/sonar-reasoning",
+    "Sonar Reasoning is a reasoning model provided by Perplexity based on [DeepSee..."
+  ],
+  "269": [
+    "perplexity/sonar-reasoning-pro",
+    "Note: Sonar Pro pricing includes Perplexity search pricing. See [details here..."
+  ],
+  "270": [
+    "prime-intellect/intellect-3",
+    "INTELLECT-3 is a 106B-parameter Mixture-of-Experts model (12B active) post-tr..."
+  ],
+  "271": [
+    "qwen/qwen-2.5-72b-instruct",
+    "Qwen2.5 72B is the latest series of Qwen large language models. Qwen2.5 bring..."
+  ],
+  "272": [
+    "qwen/qwen-2.5-7b-instruct",
+    "Qwen2.5 7B is the latest series of Qwen large language models. Qwen2.5 brings..."
+  ],
+  "273": [
+    "qwen/qwen-2.5-coder-32b-instruct",
+    "Qwen2.5-Coder is the latest series of Code-Specific Qwen large language model..."
+  ],
+  "274": [
+    "qwen/qwen-2.5-vl-7b-instruct",
+    "Qwen2.5 VL 7B is a multimodal LLM from the Qwen Team with the following key e..."
+  ],
+  "275": [
+    "qwen/qwen-2.5-vl-7b-instruct:free",
+    "Qwen2.5 VL 7B is a multimodal LLM from the Qwen Team with the following key e..."
+  ],
+  "276": [
+    "qwen/qwen-max",
+    "Qwen-Max, based on Qwen2.5, provides the best inference performance among [Qw..."
+  ],
+  "277": [
+    "qwen/qwen-plus",
+    "Qwen-Plus, based on the Qwen2.5 foundation model, is a 131K context model wit..."
+  ],
+  "278": [
+    "qwen/qwen-plus-2025-07-28",
+    "Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context h..."
+  ],
+  "279": [
+    "qwen/qwen-plus-2025-07-28:thinking",
+    "Qwen Plus 0728, based on the Qwen3 foundation model, is a 1 million context h..."
+  ],
+  "280": [
+    "qwen/qwen-turbo",
+    "Qwen-Turbo, based on Qwen2.5, is a 1M context model that provides fast speed ..."
+  ],
+  "281": [
+    "qwen/qwen-vl-max",
+    "Qwen VL Max is a visual understanding model with 7500 tokens context length. ..."
+  ],
+  "282": [
+    "qwen/qwen-vl-plus",
+    "Qwen's Enhanced Large Visual Language Model. Significantly upgraded for detai..."
+  ],
+  "283": [
+    "qwen/qwen2.5-coder-7b-instruct",
+    "Qwen2.5-Coder-7B-Instruct is a 7B parameter instruction-tuned language model ..."
+  ],
+  "284": [
+    "qwen/qwen2.5-vl-32b-instruct",
+    "Qwen2.5-VL-32B is a multimodal vision-language model fine-tuned through reinf..."
+  ],
+  "285": [
+    "qwen/qwen2.5-vl-72b-instruct",
+    "Qwen2.5-VL is proficient in recognizing common objects such as flowers, birds..."
+  ],
+  "286": [
+    "qwen/qwen3-14b",
+    "Qwen3-14B is a dense 14.8B parameter causal language model from the Qwen3 ser..."
+  ],
+  "287": [
+    "qwen/qwen3-235b-a22b",
+    "Qwen3-235B-A22B is a 235B parameter mixture-of-experts (MoE) model developed ..."
+  ],
+  "288": [
+    "qwen/qwen3-235b-a22b-2507",
+    "Qwen3-235B-A22B-Instruct-2507 is a multilingual, instruction-tuned mixture-of..."
+  ],
+  "289": [
+    "qwen/qwen3-235b-a22b-thinking-2507",
+    "Qwen3-235B-A22B-Thinking-2507 is a high-performance, open-weight Mixture-of-E..."
+  ],
+  "290": [
+    "qwen/qwen3-30b-a3b",
+    "Qwen3, the latest generation in the Qwen large language model series, feature..."
+  ],
+  "291": [
+    "qwen/qwen3-30b-a3b-instruct-2507",
+    "Qwen3-30B-A3B-Instruct-2507 is a 30.5B-parameter mixture-of-experts language ..."
+  ],
+  "292": [
+    "qwen/qwen3-30b-a3b-thinking-2507",
+    "Qwen3-30B-A3B-Thinking-2507 is a 30B parameter Mixture-of-Experts reasoning m..."
+  ],
+  "293": [
+    "qwen/qwen3-32b",
+    "Qwen3-32B is a dense 32.8B parameter causal language model from the Qwen3 ser..."
+  ],
+  "294": [
+    "qwen/qwen3-4b:free",
+    "Qwen3-4B is a 4 billion parameter dense language model from the Qwen3 series,..."
+  ],
+  "295": [
+    "qwen/qwen3-8b",
+    "Qwen3-8B is a dense 8.2B parameter causal language model from the Qwen3 serie..."
+  ],
+  "296": [
+    "qwen/qwen3-coder",
+    "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation ..."
+  ],
+  "297": [
+    "qwen/qwen3-coder-30b-a3b-instruct",
+    "Qwen3-Coder-30B-A3B-Instruct is a 30.5B parameter Mixture-of-Experts (MoE) mo..."
+  ],
+  "298": [
+    "qwen/qwen3-coder-flash",
+    "Qwen3 Coder Flash is Alibaba's fast and cost efficient version of their propr..."
+  ],
+  "299": [
+    "qwen/qwen3-coder-plus",
+    "Qwen3 Coder Plus is Alibaba's proprietary version of the Open Source Qwen3 Co..."
+  ],
+  "300": [
+    "qwen/qwen3-coder:exacto",
+    "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation ..."
+  ],
+  "301": [
+    "qwen/qwen3-coder:free",
+    "Qwen3-Coder-480B-A35B-Instruct is a Mixture-of-Experts (MoE) code generation ..."
+  ],
+  "302": [
+    "qwen/qwen3-max",
+    "Qwen3-Max is an updated release built on the Qwen3 series, offering major imp..."
+  ],
+  "303": [
+    "qwen/qwen3-next-80b-a3b-instruct",
+    "Qwen3-Next-80B-A3B-Instruct is an instruction-tuned chat model in the Qwen3-N..."
+  ],
+  "304": [
+    "qwen/qwen3-next-80b-a3b-thinking",
+    "Qwen3-Next-80B-A3B-Thinking is a reasoning-first chat model in the Qwen3-Next..."
+  ],
+  "305": [
+    "qwen/qwen3-vl-235b-a22b-instruct",
+    "Qwen3-VL-235B-A22B Instruct is an open-weight multimodal model that unifies s..."
+  ],
+  "306": [
+    "qwen/qwen3-vl-235b-a22b-thinking",
+    "Qwen3-VL-235B-A22B Thinking is a multimodal model that unifies strong text ge..."
+  ],
+  "307": [
+    "qwen/qwen3-vl-30b-a3b-instruct",
+    "Qwen3-VL-30B-A3B-Instruct is a multimodal model that unifies strong text gene..."
+  ],
+  "308": [
+    "qwen/qwen3-vl-30b-a3b-thinking",
+    "Qwen3-VL-30B-A3B-Thinking is a multimodal model that unifies strong text gene..."
+  ],
+  "309": [
+    "qwen/qwen3-vl-32b-instruct",
+    "Qwen3-VL-32B-Instruct is a large-scale multimodal vision-language model desig..."
+  ],
+  "310": [
+    "qwen/qwen3-vl-8b-instruct",
+    "Qwen3-VL-8B-Instruct is a multimodal vision-language model from the Qwen3-VL ..."
+  ],
+  "311": [
+    "qwen/qwen3-vl-8b-thinking",
+    "Qwen3-VL-8B-Thinking is the reasoning-optimized variant of the Qwen3-VL-8B mu..."
+  ],
+  "312": [
+    "qwen/qwq-32b",
+    "QwQ is the reasoning model of the Qwen series. Compared with conventional ins..."
+  ],
+  "313": [
+    "raifle/sorcererlm-8x22b",
+    "SorcererLM is an advanced RP and storytelling model, built as a Low-rank 16-b..."
+  ],
+  "314": [
+    "relace/relace-apply-3",
+    "Relace Apply 3 is a specialized code-patching LLM that merges AI-suggested ed..."
+  ],
+  "315": [
+    "relace/relace-search",
+    "The relace-search model uses 4-12 `view_file` and `grep` tools in parallel to..."
+  ],
+  "316": [
+    "sao10k/l3-euryale-70b",
+    "Euryale 70B v2.1 is a model focused on creative roleplay from [Sao10k](https:..."
+  ],
+  "317": [
+    "sao10k/l3-lunaris-8b",
+    "Lunaris 8B is a versatile generalist and roleplaying model based on Llama 3. ..."
+  ],
+  "318": [
+    "sao10k/l3.1-70b-hanami-x1",
+    "This is [Sao10K](/sao10k)'s experiment over [Euryale v2.2](/sao10k/l3.1-eurya..."
+  ],
+  "319": [
+    "sao10k/l3.1-euryale-70b",
+    "Euryale L3.1 70B v2.2 is a model focused on creative roleplay from [Sao10k](h..."
+  ],
+  "320": [
+    "sao10k/l3.3-euryale-70b",
+    "Euryale L3.3 70B is a model focused on creative roleplay from [Sao10k](https:..."
+  ],
+  "321": [
+    "stepfun-ai/step3",
+    "Step3 is a cutting-edge multimodal reasoning model—built on a Mixture-of-Expe..."
+  ],
+  "322": [
+    "switchpoint/router",
+    "Switchpoint AI's router instantly analyzes your request and directs it to the..."
+  ],
+  "323": [
+    "tencent/hunyuan-a13b-instruct",
+    "Hunyuan-A13B is a 13B active parameter Mixture-of-Experts (MoE) language mode..."
+  ],
+  "324": [
+    "thedrummer/cydonia-24b-v4.1",
+    "Uncensored and creative writing model based on Mistral Small 3.2 24B with goo..."
+  ],
+  "325": [
+    "thedrummer/rocinante-12b",
+    "Rocinante 12B is designed for engaging storytelling and rich prose.\n\nEarly te..."
+  ],
+  "326": [
+    "thedrummer/skyfall-36b-v2",
+    "Skyfall 36B v2 is an enhanced iteration of Mistral Small 2501, specifically f..."
+  ],
+  "327": [
+    "thedrummer/unslopnemo-12b",
+    "UnslopNemo v4.1 is the latest addition from the creator of Rocinante, designe..."
+  ],
+  "328": [
+    "thudm/glm-4.1v-9b-thinking",
+    "GLM-4.1V-9B-Thinking is a 9B parameter vision-language model developed by THU..."
+  ],
+  "329": [
+    "tngtech/deepseek-r1t-chimera",
+    "DeepSeek-R1T-Chimera is created by merging DeepSeek-R1 and DeepSeek-V3 (0324)..."
+  ],
+  "330": [
+    "tngtech/deepseek-r1t-chimera:free",
+    "DeepSeek-R1T-Chimera is created by merging DeepSeek-R1 and DeepSeek-V3 (0324)..."
+  ],
+  "331": [
+    "tngtech/deepseek-r1t2-chimera",
+    "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tec..."
+  ],
+  "332": [
+    "tngtech/deepseek-r1t2-chimera:free",
+    "DeepSeek-TNG-R1T2-Chimera is the second-generation Chimera model from TNG Tec..."
+  ],
+  "333": [
+    "tngtech/tng-r1t-chimera",
+    "TNG-R1T-Chimera is an experimental LLM with a faible for creative storytellin..."
+  ],
+  "334": [
+    "tngtech/tng-r1t-chimera:free",
+    "TNG-R1T-Chimera is an experimental LLM with a faible for creative storytellin..."
+  ],
+  "335": [
+    "undi95/remm-slerp-l2-13b",
+    "A recreation trial of the original MythoMax-L2-B13 but with updated models. #..."
+  ],
+  "336": [
+    "x-ai/grok-3",
+    "Grok 3 is the latest model from xAI. It's their flagship model that excels at..."
+  ],
+  "337": [
+    "x-ai/grok-3-beta",
+    "Grok 3 is the latest model from xAI. It's their flagship model that excels at..."
+  ],
+  "338": [
+    "x-ai/grok-3-mini",
+    "A lightweight model that thinks before responding. Fast, smart, and great for..."
+  ],
+  "339": [
+    "x-ai/grok-3-mini-beta",
+    "Grok 3 Mini is a lightweight, smaller thinking model. Unlike traditional mode..."
+  ],
+  "340": [
+    "x-ai/grok-4",
+    "Grok 4 is xAI's latest reasoning model with a 256k context window. It support..."
+  ],
+  "341": [
+    "x-ai/grok-4-fast",
+    "Grok 4 Fast is xAI's latest multimodal model with SOTA cost-efficiency and a ..."
+  ],
+  "342": [
+    "x-ai/grok-4.1-fast",
+    "Grok 4.1 Fast is xAI's best agentic tool calling model that shines in real-wo..."
+  ],
+  "343": [
+    "x-ai/grok-code-fast-1",
+    "Grok Code Fast 1 is a speedy and economical reasoning model that excels at ag..."
+  ],
+  "344": [
+    "xiaomi/mimo-v2-flash:free",
+    "MiMo-V2-Flash is an open-source foundation language model developed by Xiaomi..."
+  ],
+  "345": [
+    "z-ai/glm-4-32b",
+    "GLM 4 32B is a cost-effective foundation language model.\n\nIt can efficiently ..."
+  ],
+  "346": [
+    "z-ai/glm-4.5",
+    "GLM-4.5 is our latest flagship foundation model, purpose-built for agent-base..."
+  ],
+  "347": [
+    "z-ai/glm-4.5-air",
+    "GLM-4.5-Air is the lightweight variant of our latest flagship model family, a..."
+  ],
+  "348": [
+    "z-ai/glm-4.5-air:free",
+    "GLM-4.5-Air is the lightweight variant of our latest flagship model family, a..."
+  ],
+  "349": [
+    "z-ai/glm-4.5v",
+    "GLM-4.5V is a vision-language foundation model for multimodal agent applicati..."
+  ],
+  "350": [
+    "z-ai/glm-4.6",
+    "Compared with GLM-4.5, this generation brings several key improvements:\n\nLong..."
+  ],
+  "351": [
+    "z-ai/glm-4.6:exacto",
+    "Compared with GLM-4.5, this generation brings several key improvements:\n\nLong..."
+  ],
+  "352": [
+    "z-ai/glm-4.6v",
+    "GLM-4.6V is a large multimodal model designed for high-fidelity visual unders..."
+  ],
+  "353": [
+    "z-ai/glm-4.7",
+    "GLM-4.7 is Z.AI’s latest flagship model, featuring upgrades in two key areas:..."
+  ]
+}

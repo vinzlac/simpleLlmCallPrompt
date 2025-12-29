@@ -31,6 +31,8 @@ class APIConfig:
     mistral_endpoint: str = "https://api.mistral.ai/v1/chat/completions"
     mistral_model: str = "mistral-tiny"
     gemini_model: str = "gemini-2.5-flash"
+    openrouter_endpoint: str = "https://openrouter.ai/api/v1/chat/completions"
+    use_proxy: bool = False  # If True, use OpenRouter as proxy
 
     @property
     def gemini_endpoint(self) -> str:
@@ -60,22 +62,28 @@ class LLMAPIClient:
         return True
 
 class MistralAPIClient(LLMAPIClient):
-    """Client for Mistral API"""
+    """Client for Mistral API (direct or via OpenRouter proxy)"""
 
     def __init__(self, api_key: str, config: APIConfig = APIConfig()):
         super().__init__(api_key, config)
+        # Use OpenRouter API key if proxy is enabled
         self.session.headers.update({
             "Authorization": f"Bearer {api_key}"
         })
 
     def call_api(self, prompt: str) -> Optional[str]:
-        """Call Mistral API with the given prompt"""
+        """Call Mistral API with the given prompt (directly or via OpenRouter proxy)"""
         if not self._validate_prompt(prompt):
             return None
 
         try:
+            # Use OpenRouter endpoint if proxy is enabled
+            endpoint = self.config.openrouter_endpoint if self.config.use_proxy else self.config.mistral_endpoint
+            # Model name: add prefix if using OpenRouter proxy
+            model_name = f"mistralai/{self.config.mistral_model}" if self.config.use_proxy else self.config.mistral_model
+            
             data = {
-                "model": self.config.mistral_model,
+                "model": model_name,
                 "messages": [
                     {
                         "role": "user",
@@ -86,9 +94,10 @@ class MistralAPIClient(LLMAPIClient):
                 "max_tokens": DEFAULT_MAX_TOKENS
             }
 
-            logger.info(f"Calling Mistral API with prompt: {prompt[:50]}...")
+            api_name = "OpenRouter (Mistral)" if self.config.use_proxy else "Mistral"
+            logger.info(f"Calling {api_name} API with prompt: {prompt[:50]}...")
             response = self.session.post(
-                self.config.mistral_endpoint,
+                endpoint,
                 json=data,
                 timeout=DEFAULT_TIMEOUT
             )
@@ -98,7 +107,8 @@ class MistralAPIClient(LLMAPIClient):
 
             if 'choices' in result and len(result['choices']) > 0:
                 content = result['choices'][0]['message']['content'].strip()
-                logger.info("Successfully received response from Mistral API")
+                api_name = "OpenRouter (Mistral)" if self.config.use_proxy else "Mistral"
+                logger.info(f"Successfully received response from {api_name} API")
                 return content
             else:
                 logger.error(f"Unexpected API response format: {result}")
@@ -112,35 +122,60 @@ class MistralAPIClient(LLMAPIClient):
             return None
 
 class GeminiAPIClient(LLMAPIClient):
-    """Client for Gemini API"""
+    """Client for Gemini API (direct or via OpenRouter proxy)"""
 
     def __init__(self, api_key: str, config: APIConfig = APIConfig()):
         super().__init__(api_key, config)
-        self.session.headers.update({
-            "X-goog-api-key": api_key
-        })
+        # If using OpenRouter proxy, use Authorization header, otherwise use X-goog-api-key
+        if config.use_proxy:
+            self.session.headers.update({
+                "Authorization": f"Bearer {api_key}"
+            })
+        else:
+            self.session.headers.update({
+                "X-goog-api-key": api_key
+            })
 
     def call_api(self, prompt: str) -> Optional[str]:
-        """Call Gemini API with the given prompt"""
+        """Call Gemini API with the given prompt (directly or via OpenRouter proxy)"""
         if not self._validate_prompt(prompt):
             return None
 
         try:
-            data = {
-                "contents": [
-                    {
-                        "parts": [
-                            {
-                                "text": prompt.strip()
-                            }
-                        ]
-                    }
-                ]
-            }
+            # If using OpenRouter proxy, use OpenRouter endpoint with OpenAI-compatible format
+            if self.config.use_proxy:
+                endpoint = self.config.openrouter_endpoint
+                model_name = f"google/{self.config.gemini_model}"
+                data = {
+                    "model": model_name,
+                    "messages": [
+                        {
+                            "role": "user",
+                            "content": prompt.strip()
+                        }
+                    ],
+                    "temperature": DEFAULT_TEMPERATURE,
+                    "max_tokens": DEFAULT_MAX_TOKENS
+                }
+            else:
+                # Direct Gemini API call
+                endpoint = self.config.gemini_endpoint
+                data = {
+                    "contents": [
+                        {
+                            "parts": [
+                                {
+                                    "text": prompt.strip()
+                                }
+                            ]
+                        }
+                    ]
+                }
 
-            logger.info(f"Calling Gemini API with prompt: {prompt[:50]}...")
+            api_name = "OpenRouter (Gemini)" if self.config.use_proxy else "Gemini"
+            logger.info(f"Calling {api_name} API with prompt: {prompt[:50]}...")
             response = self.session.post(
-                self.config.gemini_endpoint,
+                endpoint,
                 json=data,
                 timeout=DEFAULT_TIMEOUT
             )
@@ -148,19 +183,29 @@ class GeminiAPIClient(LLMAPIClient):
             response.raise_for_status()
             result = response.json()
 
-            if 'candidates' in result and len(result['candidates']) > 0:
-                content = result['candidates'][0]['content']['parts'][0]['text'].strip()
-                logger.info("Successfully received response from Gemini API")
-                return content
+            # Handle OpenRouter response format (OpenAI-compatible)
+            if self.config.use_proxy:
+                if 'choices' in result and len(result['choices']) > 0:
+                    content = result['choices'][0]['message']['content'].strip()
+                    logger.info("Successfully received response from OpenRouter (Gemini) API")
+                    return content
             else:
-                logger.error(f"Unexpected API response format: {result}")
-                return None
+                # Direct Gemini API response format
+                if 'candidates' in result and len(result['candidates']) > 0:
+                    content = result['candidates'][0]['content']['parts'][0]['text'].strip()
+                    logger.info("Successfully received response from Gemini API")
+                    return content
+            
+            logger.error(f"Unexpected API response format: {result}")
+            return None
 
         except requests.exceptions.RequestException as e:
-            logger.error(f"Gemini API request failed: {e}")
+            api_name = "OpenRouter (Gemini)" if self.config.use_proxy else "Gemini"
+            logger.error(f"{api_name} API request failed: {e}")
             return None
         except Exception as e:
-            logger.error(f"Error processing Gemini API response: {e}")
+            api_name = "OpenRouter (Gemini)" if self.config.use_proxy else "Gemini"
+            logger.error(f"Error processing {api_name} API response: {e}")
             return None
 
 class LLMInteractiveClient:
@@ -184,7 +229,16 @@ class LLMInteractiveClient:
     def run_interactive_session(self):
         """Run an interactive session with the LLM"""
         provider_name = self.provider.capitalize()
-        model_name = self.config.mistral_model if self.provider == "mistral" else self.config.gemini_model
+        if self.provider == "mistral":
+            model_name = self.config.mistral_model
+            if self.config.use_proxy:
+                provider_name = f"{provider_name} (via OpenRouter)"
+        elif self.provider == "gemini":
+            model_name = self.config.gemini_model
+            if self.config.use_proxy:
+                provider_name = f"{provider_name} (via OpenRouter)"
+        else:
+            model_name = "unknown"
         
         logger.info(f"{provider_name} LLM Interactive Client")
         logger.info(f"Provider: {provider_name}")
@@ -374,6 +428,10 @@ def get_mistral_models_cache_path() -> Path:
     """Get the path to the Mistral models cache file"""
     return Path(__file__).parent / ".mistral_models_cache.json"
 
+def get_openrouter_models_cache_path(provider: str) -> Path:
+    """Get the path to the OpenRouter models cache file for a specific provider"""
+    return Path(__file__).parent / f".{provider}_models_openrouter_cache.json"
+
 def save_gemini_models_to_cache(models: Dict[str, tuple]) -> None:
     """Save Gemini models to cache file"""
     cache_path = get_gemini_models_cache_path()
@@ -444,6 +502,107 @@ def load_mistral_models_from_cache() -> Optional[Dict[str, tuple]]:
         logger.warning(f"Erreur lors du chargement du cache: {e}")
         return None
 
+def save_openrouter_models_to_cache(provider: str, models: Dict[str, tuple]) -> None:
+    """Save OpenRouter models to cache file for a specific provider"""
+    cache_path = get_openrouter_models_cache_path(provider)
+    try:
+        # Convertir les tuples en listes pour la sérialisation JSON
+        models_serializable = {
+            key: [model_id, description]
+            for key, (model_id, description) in models.items()
+        }
+        with open(cache_path, 'w', encoding='utf-8') as f:
+            json.dump(models_serializable, f, indent=2, ensure_ascii=False)
+        logger.info(f"Modèles {provider} via OpenRouter sauvegardés dans {cache_path}")
+    except Exception as e:
+        logger.warning(f"Erreur lors de la sauvegarde du cache: {e}")
+
+def load_openrouter_models_from_cache(provider: str) -> Optional[Dict[str, tuple]]:
+    """Load OpenRouter models from cache file for a specific provider"""
+    cache_path = get_openrouter_models_cache_path(provider)
+    if not cache_path.exists():
+        return None
+    
+    try:
+        with open(cache_path, 'r', encoding='utf-8') as f:
+            models_serializable = json.load(f)
+        # Convertir les listes en tuples
+        models = {
+            key: tuple(value)
+            for key, value in models_serializable.items()
+        }
+        logger.info(f"Modèles {provider} via OpenRouter chargés depuis le cache ({len(models)} modèles)")
+        return models
+    except Exception as e:
+        logger.warning(f"Erreur lors du chargement du cache: {e}")
+        return None
+
+def fetch_openrouter_models(provider: str, api_key: str, force_refresh: bool = False) -> Dict[str, tuple]:
+    """Fetch available models from OpenRouter API dynamically, filtered by provider"""
+    # Charger depuis le cache si disponible et si pas de refresh forcé
+    if not force_refresh:
+        cached_models = load_openrouter_models_from_cache(provider)
+        if cached_models:
+            return cached_models
+    
+    try:
+        headers = {
+            'Authorization': f'Bearer {api_key}',
+            'Content-Type': 'application/json'
+        }
+        
+        logger.info(f"Récupération de la liste des modèles {provider} depuis l'API OpenRouter...")
+        response = requests.get(
+            'https://openrouter.ai/api/v1/models',
+            headers=headers,
+            timeout=DEFAULT_TIMEOUT
+        )
+        
+        response.raise_for_status()
+        data = response.json()
+        
+        models_list = []
+        # Filter prefix based on provider
+        provider_prefix = "mistralai/" if provider == "mistral" else "google/"
+        
+        if 'data' in data and isinstance(data['data'], list):
+            for model in data['data']:
+                model_id = model.get('id', '')
+                # Filtrer seulement les modèles du provider et les modèles de chat (pas les embeddings)
+                if (model_id.startswith(provider_prefix) and 
+                    'embed' not in model_id.lower() and 
+                    model.get('context_length', 0) > 0):
+                    # Utiliser le nom ou l'ID comme description
+                    name = model.get('name', model_id)
+                    description = model.get('description', f'Modèle {name}')
+                    # Nettoyer la description (limiter la longueur)
+                    if len(description) > 80:
+                        description = description[:77] + "..."
+                    models_list.append((model_id, description))
+            
+            # Trier par nom
+            models_list.sort(key=lambda x: x[0])
+            
+            # Convertir en dictionnaire avec index
+            models_dict = {str(idx): model for idx, model in enumerate(models_list, start=1)}
+            
+            logger.info(f"✅ {len(models_dict)} modèles {provider} récupérés depuis l'API OpenRouter")
+            # Sauvegarder dans le cache
+            save_openrouter_models_to_cache(provider, models_dict)
+            return models_dict
+        else:
+            logger.warning("Format de réponse inattendu de l'API OpenRouter")
+            return get_fallback_openrouter_models(provider)
+            
+    except requests.exceptions.RequestException as e:
+        logger.warning(f"Impossible de récupérer les modèles depuis l'API OpenRouter: {e}")
+        logger.info("Utilisation de la liste de modèles par défaut...")
+        return get_fallback_openrouter_models(provider)
+    except Exception as e:
+        logger.warning(f"Erreur lors de la récupération des modèles: {e}")
+        logger.info("Utilisation de la liste de modèles par défaut...")
+        return get_fallback_openrouter_models(provider)
+
 def get_fallback_gemini_models() -> Dict[str, tuple]:
     """Fallback list of Gemini models if dynamic testing fails"""
     return {
@@ -452,18 +611,47 @@ def get_fallback_gemini_models() -> Dict[str, tuple]:
         "3": ("gemini-2.0-flash-exp", "Version expérimentale de Gemini 2.0 Flash"),
     }
 
-def get_available_models(provider: str, api_key: Optional[str] = None, force_refresh: bool = False) -> Dict[str, tuple]:
+def get_fallback_openrouter_models(provider: str) -> Dict[str, tuple]:
+    """Fallback list of OpenRouter models if API call fails, filtered by provider"""
+    if provider == "mistral":
+        return {
+            "1": ("mistralai/mistral-small-latest", "Mistral Small via OpenRouter"),
+            "2": ("mistralai/mistral-medium-latest", "Mistral Medium via OpenRouter"),
+            "3": ("mistralai/mistral-large-latest", "Mistral Large via OpenRouter"),
+        }
+    elif provider == "gemini":
+        return {
+            "1": ("google/gemini-2.5-flash", "Gemini 2.5 Flash via OpenRouter"),
+            "2": ("google/gemini-2.5-pro", "Gemini 2.5 Pro via OpenRouter"),
+            "3": ("google/gemini-2.0-flash-exp", "Gemini 2.0 Flash via OpenRouter"),
+        }
+    else:
+        return {}
+
+def get_available_models(provider: str, api_key: Optional[str] = None, force_refresh: bool = False, use_proxy: bool = False) -> Dict[str, tuple]:
     """Get available models for a provider with descriptions"""
     if provider == "mistral":
-        if api_key:
-            # Essayer de récupérer dynamiquement depuis l'API
+        if use_proxy and api_key:
+            # Récupérer les modèles Mistral via OpenRouter
+            models = fetch_openrouter_models("mistral", api_key, force_refresh=force_refresh)
+            if models:
+                return models
+            return get_fallback_openrouter_models("mistral")
+        elif api_key:
+            # Essayer de récupérer dynamiquement depuis l'API Mistral directe
             models = fetch_mistral_models(api_key, force_refresh=force_refresh)
             if models:
                 return models
         # Fallback vers liste statique si pas de clé API ou erreur
         return get_fallback_mistral_models()
     elif provider == "gemini":
-        if api_key:
+        if use_proxy and api_key:
+            # Récupérer les modèles Gemini via OpenRouter
+            models = fetch_openrouter_models("gemini", api_key, force_refresh=force_refresh)
+            if models:
+                return models
+            return get_fallback_openrouter_models("gemini")
+        elif api_key:
             # Essayer de récupérer dynamiquement en testant les modèles connus
             models = fetch_gemini_models(api_key, force_refresh=force_refresh)
             if models:
@@ -473,20 +661,22 @@ def get_available_models(provider: str, api_key: Optional[str] = None, force_ref
     else:
         return {}
 
-def select_model_interactively(provider: str, api_key: Optional[str] = None, force_refresh: bool = False) -> Optional[str]:
+def select_model_interactively(provider: str, api_key: Optional[str] = None, force_refresh: bool = False, use_proxy: bool = False) -> Optional[str]:
     """Interactively select a model for the given provider"""
-    models = get_available_models(provider, api_key, force_refresh=force_refresh)
+    models = get_available_models(provider, api_key, force_refresh=force_refresh, use_proxy=use_proxy)
     
     if not models:
         logger.error(f"No models available for provider: {provider}")
         return None
     
     provider_name = provider.capitalize()
+    if use_proxy:
+        provider_name = f"{provider_name} (via OpenRouter)"
     
     # URLs de pricing pour chaque provider
     pricing_urls = {
-        "mistral": "https://mistral.ai/fr/pricing",
-        "gemini": "https://ai.google.dev/pricing"
+        "mistral": "https://mistral.ai/fr/pricing" if not use_proxy else "https://openrouter.ai/models",
+        "gemini": "https://ai.google.dev/pricing" if not use_proxy else "https://openrouter.ai/models",
     }
     
     print(f"\n{'='*60}")
@@ -545,37 +735,62 @@ def parse_arguments() -> argparse.Namespace:
         help="Choose the LLM provider to use (default: mistral)"
     )
     parser.add_argument(
+        "--proxy",
+        choices=["openrouter"],
+        help="Use OpenRouter as a proxy to access the provider models"
+    )
+    parser.add_argument(
         "--refresh",
         action="store_true",
-        help="Force refresh of model list (for Gemini, reload from API instead of cache)"
+        help="Force refresh of model list (reload from API instead of cache)"
     )
     return parser.parse_args()
 
 def main():
     """Main entry point for the LLM interactive client"""
     args = parse_arguments()
+    
+    use_proxy = args.proxy == "openrouter"
 
     # Load environment variables
     dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
     load_dotenv(dotenv_path=dotenv_path, override=True)
 
-    # Get API key
-    api_key = get_api_key(args.provider)
-    if not api_key:
-        return
+    # Get API key - use OpenRouter key if proxy is enabled, otherwise use provider key
+    if use_proxy:
+        api_key = get_api_key("openrouter")
+        if not api_key:
+            logger.error("OPENROUTER_API_KEY not found. Required when using --proxy openrouter")
+            return
+    else:
+        api_key = get_api_key(args.provider)
+        if not api_key:
+            return
 
     # Select model interactively (pass API key to fetch models dynamically)
-    selected_model = select_model_interactively(args.provider, api_key, force_refresh=args.refresh)
+    selected_model = select_model_interactively(args.provider, api_key, force_refresh=args.refresh, use_proxy=use_proxy)
     if not selected_model:
         logger.error("Aucun modèle sélectionné. Arrêt de l'application.")
         return
 
-    # Create config with selected model
+    # Create config with selected model and proxy setting
     config = APIConfig()
+    config.use_proxy = use_proxy
+    
     if args.provider == "mistral":
-        config.mistral_model = selected_model
+        # If using OpenRouter proxy, remove the "mistralai/" prefix (model is like "mistralai/mistral-small")
+        # The prefix will be re-added in the client's call_api method
+        if use_proxy and selected_model.startswith("mistralai/"):
+            config.mistral_model = selected_model.replace("mistralai/", "")
+        else:
+            config.mistral_model = selected_model
     elif args.provider == "gemini":
-        config.gemini_model = selected_model
+        # If using OpenRouter proxy, remove the "google/" prefix (model is like "google/gemini-2.5-flash")
+        # The prefix will be re-added in the client's call_api method
+        if use_proxy and selected_model.startswith("google/"):
+            config.gemini_model = selected_model.replace("google/", "")
+        else:
+            config.gemini_model = selected_model
 
     # Initialize and run client with selected model
     client = LLMInteractiveClient(args.provider, api_key, config)

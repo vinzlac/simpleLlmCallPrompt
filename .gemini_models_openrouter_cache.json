@@ -1,0 +1,106 @@
+{
+  "1": [
+    "google/gemini-2.0-flash-001",
+    "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) com..."
+  ],
+  "2": [
+    "google/gemini-2.0-flash-exp:free",
+    "Gemini Flash 2.0 offers a significantly faster time to first token (TTFT) com..."
+  ],
+  "3": [
+    "google/gemini-2.0-flash-lite-001",
+    "Gemini 2.0 Flash Lite offers a significantly faster time to first token (TTFT..."
+  ],
+  "4": [
+    "google/gemini-2.5-flash",
+    "Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically d..."
+  ],
+  "5": [
+    "google/gemini-2.5-flash-image",
+    "Gemini 2.5 Flash Image, a.k.a. \"Nano Banana,\" is now generally available. It ..."
+  ],
+  "6": [
+    "google/gemini-2.5-flash-image-preview",
+    "Gemini 2.5 Flash Image Preview, a.k.a. \"Nano Banana,\" is a state of the art i..."
+  ],
+  "7": [
+    "google/gemini-2.5-flash-lite",
+    "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 fami..."
+  ],
+  "8": [
+    "google/gemini-2.5-flash-lite-preview-09-2025",
+    "Gemini 2.5 Flash-Lite is a lightweight reasoning model in the Gemini 2.5 fami..."
+  ],
+  "9": [
+    "google/gemini-2.5-flash-preview-09-2025",
+    "Gemini 2.5 Flash Preview September 2025 Checkpoint is Google's state-of-the-a..."
+  ],
+  "10": [
+    "google/gemini-2.5-pro",
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced re..."
+  ],
+  "11": [
+    "google/gemini-2.5-pro-preview",
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced re..."
+  ],
+  "12": [
+    "google/gemini-2.5-pro-preview-05-06",
+    "Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced re..."
+  ],
+  "13": [
+    "google/gemini-3-flash-preview",
+    "Gemini 3 Flash Preview is a high speed, high value thinking model designed fo..."
+  ],
+  "14": [
+    "google/gemini-3-pro-image-preview",
+    "Nano Banana Pro is Google’s most advanced image-generation and editing model,..."
+  ],
+  "15": [
+    "google/gemini-3-pro-preview",
+    "Gemini 3 Pro is Google’s flagship frontier model for high-precision multimoda..."
+  ],
+  "16": [
+    "google/gemma-2-27b-it",
+    "Gemma 2 27B by Google is an open model built from the same research and techn..."
+  ],
+  "17": [
+    "google/gemma-2-9b-it",
+    "Gemma 2 9B by Google is an advanced, open-source language model that sets a n..."
+  ],
+  "18": [
+    "google/gemma-3-12b-it",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "19": [
+    "google/gemma-3-12b-it:free",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "20": [
+    "google/gemma-3-27b-it",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "21": [
+    "google/gemma-3-27b-it:free",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "22": [
+    "google/gemma-3-4b-it",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "23": [
+    "google/gemma-3-4b-it:free",
+    "Gemma 3 introduces multimodality, supporting vision-language input and text o..."
+  ],
+  "24": [
+    "google/gemma-3n-e2b-it:free",
+    "Gemma 3n E2B IT is a multimodal, instruction-tuned model developed by Google ..."
+  ],
+  "25": [
+    "google/gemma-3n-e4b-it",
+    "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resour..."
+  ],
+  "26": [
+    "google/gemma-3n-e4b-it:free",
+    "Gemma 3n E4B-it is optimized for efficient execution on mobile and low-resour..."
+  ]
+}

@@ -1,6 +1,6 @@
 # Multi-Provider LLM Interactive Client
 
-A simple Python application that allows you to interact with multiple LLM APIs (Mistral and Gemini) in an interactive mode.
+A simple Python application that allows you to interact with multiple LLM APIs (Mistral, Gemini, and OpenRouter) in an interactive mode.
 
 ## Features
 
@@ -22,6 +22,7 @@ A simple Python application that allows you to interact with multiple LLM APIs (
 - uv (for dependency management)
 - Mistral API key (for Mistral provider)
 - Gemini API key (for Gemini provider)
+- OpenRouter API key (for OpenRouter provider)
 
 ## Installation
 
@@ -31,10 +32,17 @@ A simple Python application that allows you to interact with multiple LLM APIs (
 
 ## Configuration
 
-1. Create a `.env` file in the project root
-2. Add your API keys:
-   - For Mistral: `MISTRAL_API_KEY=your_mistral_api_key_here`
-   - For Gemini: `GEMINI_API_KEY=your_gemini_api_key_here`
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit the `.env` file and add your API keys:
+   - For Mistral: Get your key from [Mistral Console](https://console.mistral.ai/)
+   - For Gemini: Get your key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+   - For OpenRouter: Get your key from [OpenRouter](https://openrouter.ai/keys)
+
+   The `.env.example` file shows the required format for all API keys.
 
 ## Usage
 
@@ -46,7 +54,7 @@ A simple Python application that allows you to interact with multiple LLM APIs (
 
 ### Provider Selection and Model Selection
 
-You can choose between Mistral and Gemini providers using the `--provider` flag. After selecting a provider, you'll be prompted to choose a model interactively:
+You can choose between Mistral, Gemini, and OpenRouter providers using the `--provider` flag. After selecting a provider, you'll be prompted to choose a model interactively:
 
 ```bash
 # Use Mistral (default)
@@ -55,20 +63,25 @@ python main.py --provider mistral
 # Use Gemini
 python main.py --provider gemini
 
+# Use OpenRouter (access to many models including GPT-4, Claude, etc.)
+python main.py --provider openrouter
+
 # Force refresh of model lists (bypass cache)
 python main.py --provider mistral --refresh
 python main.py --provider gemini --refresh
+python main.py --provider openrouter --refresh
 ```
 
 **Model Selection Process:**
 1. After selecting a provider, available models are displayed
 2. For Mistral: Models are fetched dynamically from the API (or loaded from cache)
 3. For Gemini: Models are tested dynamically (or loaded from cache)
-4. Select a model by entering its number
-5. Pricing information links are displayed for reference
+4. For OpenRouter: Models are fetched dynamically from the OpenRouter API (or loaded from cache)
+5. Select a model by entering its number
+6. Pricing information links are displayed for reference
 
 **Model Caching:**
-- Model lists are cached in `.mistral_models_cache.json` and `.gemini_models_cache.json`
+- Model lists are cached in `.mistral_models_cache.json`, `.gemini_models_cache.json`, and `.openrouter_models_cache.json`
 - Cache is persistent and never expires automatically
 - Use `--refresh` flag to force update the cache
 - First run will fetch models from APIs (may take a few seconds)
@@ -158,12 +171,14 @@ The application automatically discovers available models:
 
 - **Mistral**: Fetches models from the Mistral API endpoint (`GET /v1/models`)
 - **Gemini**: Tests known models to determine availability (since no public listing endpoint exists)
+- **OpenRouter**: Fetches models from the OpenRouter API endpoint (`GET /v1/models`) - provides access to many models including GPT-4, Claude, Llama, and more
 
 ### Model Caching
 
 Model lists are cached in JSON files for fast startup:
 - `.mistral_models_cache.json` - Cached Mistral models
 - `.gemini_models_cache.json` - Cached Gemini models
+- `.openrouter_models_cache.json` - Cached OpenRouter models
 
 **Cache behavior:**
 - Cache is persistent (never expires automatically)
@@ -222,11 +237,13 @@ This will run comprehensive unit tests for all classes:
 
 ```
 simpleLlmCallPrompt/
-├── .env                           # Environment variables and API keys
+├── .env                           # Environment variables and API keys (not in git)
+├── .env.example                   # Example environment file with API key placeholders
 ├── .gitignore                     # Git ignore rules
 ├── .python-version                # Python version specification
 ├── .mistral_models_cache.json     # Cached Mistral models list
 ├── .gemini_models_cache.json      # Cached Gemini models list
+├── .openrouter_models_cache.json  # Cached OpenRouter models list
 ├── check_api_key.py               # API key validation utility
 ├── main.py                        # Main application entry point
 ├── pyproject.toml                 # Project configuration and dependencies
