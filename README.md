@@ -274,6 +274,29 @@ You can modify the following parameters in `main.py`:
 
 The project includes multiple testing utilities:
 
+### Quick Mistral API key test
+
+If you just want to quickly verify that your **Mistral API key** is valid and that the project can call the API, you can use the dedicated test script:
+
+```bash
+# 1) Install dependencies (once)
+uv sync
+
+# 2) Activate the virtual environment
+source .venv/bin/activate
+
+# 3) Run the Mistral test script
+python test_mistral_call.py
+```
+
+This script:
+- Loads your `.env` file
+- Reads the `MISTRAL_API_KEY`
+- Sends a simple test prompt to Mistral
+- Prints the received answer, the provider and the model used
+
+If you see a valid answer printed, your Mistral configuration is working correctly.
+
 ### Basic Setup Verification
 
 Run the setup verification script:
