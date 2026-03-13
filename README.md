@@ -47,6 +47,12 @@ A simple Python application that allows you to interact with multiple LLM APIs (
    
    **Note:** You only need the OpenRouter API key if you plan to use the `--provider openrouter` option.
 
+3. **(Optional) direnv** — Pour charger automatiquement les variables du `.env` en entrant dans le répertoire du projet :
+   ```bash
+   brew install direnv
+   ```
+   Ajoute dans ton `~/.zshrc` : `eval "$(direnv hook zsh)"`, puis redémarre le terminal. Dans le projet, une fois : `direnv allow`. Les clés du `.env` seront exportées à chaque `cd` dans ce dossier.
+
 ## Usage
 
 ### Basic Usage
@@ -246,6 +252,15 @@ uv run python main.py \
 uv run python main.py \
   --provider openrouter \
   --model google/gemini-2.5-flash-lite \
+  --prompt "Explique-moi l’intelligence artificielle en une phrase."
+```
+
+#### OpenRouter + Mistral (provider = openrouter, modèle explicite)
+
+```bash
+uv run python main.py \
+  --provider openrouter \
+  --model mistralai/devstral-2512 \
   --prompt "Explique-moi l’intelligence artificielle en une phrase."
 ```
 

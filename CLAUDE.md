@@ -9,6 +9,8 @@ uv sync                    # Install dependencies
 cp .env.example .env       # Then add API keys to .env
 ```
 
+**direnv:** Le projet contient un `.envrc` (dotenv). Avec direnv installé et le hook dans `~/.zshrc`, faire une fois `direnv allow` dans le repo pour charger automatiquement le `.env` au `cd`.
+
 Required env vars: `MISTRAL_API_KEY`, `GEMINI_API_KEY`, `OPENROUTER_API_KEY` (only when using `--provider openrouter`).
 
 ## Running
