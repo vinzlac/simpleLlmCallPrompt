@@ -9,14 +9,14 @@ uv sync                    # Install dependencies
 cp .env.example .env       # Then add API keys to .env
 ```
 
-Required env vars: `MISTRAL_API_KEY`, `GEMINI_API_KEY`, `OPENROUTER_API_KEY` (only when using `--proxy openrouter`).
+Required env vars: `MISTRAL_API_KEY`, `GEMINI_API_KEY`, `OPENROUTER_API_KEY` (only when using `--provider openrouter`).
 
 ## Running
 
 ```bash
 uv run python main.py                                        # Default (Mistral, interactive model selection)
 uv run python main.py --provider gemini
-uv run python main.py --provider mistral --proxy openrouter
+uv run python main.py --provider openrouter --model google/gemini-2.5-flash-lite --prompt "Test prompt"
 uv run python main.py --provider mistral --refresh          # Bypass model cache
 ```
 

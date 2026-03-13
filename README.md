@@ -41,25 +41,25 @@ A simple Python application that allows you to interact with multiple LLM APIs (
 2. Edit the `.env` file and add your API keys:
    - For Mistral (direct access): Get your key from [Mistral Console](https://console.mistral.ai/)
    - For Gemini (direct access): Get your key from [Google AI Studio](https://aistudio.google.com/app/apikey)
-   - For OpenRouter (when using `--proxy openrouter`): Get your key from [OpenRouter](https://openrouter.ai/keys)
+   - For OpenRouter (when using `--provider openrouter`): Get your key from [OpenRouter](https://openrouter.ai/keys)
 
    The `.env.example` file shows the required format for all API keys.
    
-   **Note:** You only need the OpenRouter API key if you plan to use the `--proxy openrouter` option.
+   **Note:** You only need the OpenRouter API key if you plan to use the `--provider openrouter` option.
 
 ## Usage
 
 ### Basic Usage
+
 1. Run the application: `uv run python main.py` (or `python main.py` if using virtual environment)
 2. Select a provider (mistral or gemini)
-3. Optionally use OpenRouter proxy: `uv run python main.py --provider mistral --proxy openrouter`
-4. Select a model from the displayed list
-5. Enter your prompts interactively
-6. Type 'quit', 'exit', or 'q' to end the session
+3. Select a model from the displayed list
+4. Enter your prompts interactively
+5. Type 'quit', 'exit', or 'q' to end the session
 
-### Provider Selection and Proxy Option
+### Provider Selection
 
-You can choose between Mistral and Gemini providers using the `--provider` flag. Optionally, you can use OpenRouter as a proxy to access these providers with `--proxy openrouter`:
+You can choose between Mistral and Gemini providers using the `--provider` flag:
 
 ```bash
 # Use Mistral directly (default)
@@ -68,27 +68,19 @@ uv run python main.py --provider mistral
 # Use Gemini directly
 uv run python main.py --provider gemini
 
-# Use Mistral via OpenRouter proxy
-uv run python main.py --provider mistral --proxy openrouter
-
-# Use Gemini via OpenRouter proxy
-uv run python main.py --provider gemini --proxy openrouter
-
 # Force refresh of model lists (bypass cache)
 uv run python main.py --provider mistral --refresh
 uv run python main.py --provider gemini --refresh
-uv run python main.py --provider mistral --proxy openrouter --refresh
-uv run python main.py --provider gemini --proxy openrouter --refresh
 ```
 
 **Model Selection Process:**
-1. After selecting a provider (and optionally a proxy), available models are displayed
+1. After selecting a provider, available models are displayed
 2. **Direct access:**
    - For Mistral: Models are fetched dynamically from the Mistral API (or loaded from cache)
    - For Gemini: Models are tested dynamically (or loaded from cache)
-3. **Via OpenRouter proxy:**
-   - Models are fetched from OpenRouter API and filtered by provider (only `mistralai/*` for Mistral, only `google/*` for Gemini)
-   - Model lists are cached separately from direct access
+3. **Via OpenRouter provider (non-interactive):**
+   - When using `--provider openrouter`, you pass the exact OpenRouter model id via `--model` (e.g. `google/gemini-2.5-flash-lite`)
+   - In this mode, there is no interactive model selection, only single-call non-interactive usage
 4. Select a model by entering its number
 5. Pricing information links are displayed for reference
 
@@ -96,9 +88,9 @@ uv run python main.py --provider gemini --proxy openrouter --refresh
 - **Direct access caches:**
   - `.mistral_models_cache.json` - Cached Mistral models (direct API)
   - `.gemini_models_cache.json` - Cached Gemini models (direct API)
-- **OpenRouter proxy caches:**
-  - `.mistral_models_openrouter_cache.json` - Cached Mistral models via OpenRouter
-  - `.gemini_models_openrouter_cache.json` - Cached Gemini models via OpenRouter
+- **(Reserved) OpenRouter caches:**
+  - `.mistral_models_openrouter_cache.json` - Reserved for potential future Mistral models via OpenRouter
+  - `.gemini_models_openrouter_cache.json` - Reserved for potential future Gemini models via OpenRouter
 - Cache is persistent and never expires automatically
 - Use `--refresh` flag to force update the cache
 - First run will fetch models from APIs (may take a few seconds)
@@ -225,6 +217,42 @@ Modèles disponibles pour Gemini (via OpenRouter):
 ============================================================
 ...
 ```
+
+### Non-interactive single call examples
+
+You can also run a **single, non-interactive** request by passing a prompt (and optionally a model) on the command line.
+
+#### Mistral direct (modèle explicite)
+
+```bash
+uv run python main.py \
+  --provider mistral \
+  --model mistral-tiny \
+  --prompt "Explique-moi l’intelligence artificielle en une phrase."
+```
+
+#### Gemini direct (modèle explicite)
+
+```bash
+uv run python main.py \
+  --provider gemini \
+  --model gemini-2.5-flash \
+  --prompt "Explique-moi l’intelligence artificielle en une phrase."
+```
+
+#### OpenRouter + Gemini (provider = openrouter, modèle explicite)
+
+```bash
+uv run python main.py \
+  --provider openrouter \
+  --model google/gemini-2.5-flash-lite \
+  --prompt "Explique-moi l’intelligence artificielle en une phrase."
+```
+
+The `openrouter/` prefix sometimes used by LiteLLM (e.g. `openrouter/google/gemini-2.5-flash-lite`) is also **accepted as an alias**, but the canonical and recommended form in this project is:
+
+- **`--provider openrouter`**
+- **`--model google/<model-name>`**
 
 ## Model Management
 
